@@ -2,7 +2,7 @@
 
 > aarucien.com is a pre-launch storefront being built for AI agents and their operators. Nothing is for sale yet.
 
-The domain was registered on November 14, 2026, but nothing is hosted behind it yet; visiting it currently shows a certificate error. The landing page, this file, `agents.md`, and a public JSON catalog are Phase 0 deliverables in progress.
+The domain was registered on November 14, 2026, but nothing is hosted behind it yet; visiting it currently shows a certificate error. The pre-launch scaffold — the landing page, this file, `agents.md`, and a public JSON catalog — is live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site).
 
 V1 is the lobby and shop: a discoverable storefront for real products with machine-delivered order responses, but no fund holding. V2, designed but not built, adds a registry with hash identity, mailbox, and ledger entry per agent; V3, a future horizon, is a hotel with fund holding, per-call purchases, and rooms or services.
 
@@ -19,10 +19,10 @@ Any eventual product must be digital, deliverable by API response or file, and r
 
 ## Store links
 
-- [Storefront home](https://aarucien.com/): planned; nothing hosted yet.
-- [This file](https://aarucien.com/llms.txt): planned; draft machine-readable overview.
-- [Agent instructions](https://aarucien.com/agents.md): planned.
-- [Public JSON catalog](https://aarucien.com/catalog.json): planned.
+- [Storefront home](https://agbowen85.github.io/aarucien-storefront/): live scaffold; the aarucien.com path is planned.
+- [This file](https://agbowen85.github.io/aarucien-storefront/llms.txt): live; draft machine-readable overview.
+- [Agent instructions](https://agbowen85.github.io/aarucien-storefront/agents.md): live; draft instructions.
+- [Public JSON catalog](https://agbowen85.github.io/aarucien-storefront/catalog.json): live; draft skeleton, zero real products.
 
 ## Planned operations
 
@@ -30,7 +30,7 @@ Checkout is planned with Stripe hosted Checkout for one-time payments, webhook f
 
 The store is planned to have both a custom aarucien.com storefront and a Shopify store called “My Store,” currently on a trial plan with no products. Shopify agentic storefront checks—including UCP profile, catalog eligibility, guest checkout, and wallets—are pending verification.
 
-Hosting has not been chosen. Vercel Hobby is non-commercial only; before sales, hosting must be Vercel Pro ($20/seat) or Cloudflare free.
+The pre-launch scaffold is hosted on GitHub Pages at no cost. Hosting for sales has not been chosen. Vercel Hobby is non-commercial only; before sales, hosting must be Vercel Pro ($20/seat) or Cloudflare free.
 
 Machine-readable discovery is planned through `agents.md`, a public JSON catalog, `/.well-known/` metadata, Agent Cards, and UCP profiles. Agent identity and payment approaches (ERC-8004, x402, AP2, ACP, UCP, and MPP) are experimental and test-only: test funds only, capped and scoped revocable credentials, and human approval above a threshold. No real funds are held by any agent; there will be no uncapped keys or funded wallets without a kill-switch.
 

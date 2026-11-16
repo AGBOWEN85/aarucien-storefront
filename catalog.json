@@ -4,13 +4,13 @@
         "~/workspace/store-action-plan.md (Phase 0: public JSON catalog; Phase 1: agent-proof delivery in the order API response)",
         "~/workspace/reach-map.md (Layers 1.10 Payments, 1.11 Storefronts)"
     ],
-    "_status": "DRAFT skeleton only, Nov 15, 2026. Not deployed; aarucien.com shows a certificate error and nothing is hosted behind it yet. The catalog is EMPTY: no real products exist. The first product + price is Aaron's undecided decision; this file invents no products or prices.",
+    "_status": "DRAFT skeleton only, Nov 16, 2026. DEPLOYED: the scaffold is live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site). aarucien.com itself shows a certificate error and nothing is hosted behind it yet. The catalog is EMPTY: no real products exist. The first product + price is Aaron's undecided decision; this file invents no products or prices.",
     "_traps": [
         "Vercel Hobby is NON-COMMERCIAL only: selling needs Vercel Pro ($20/seat) or the Cloudflare free path before any sale.",
         "Shopify has NO free plan: Basic $39/mo after the trial."
     ],
     "catalog_url": "https://aarucien.com/catalog.json",
-    "catalog_url_status": "planned Phase 0 path; whether it serves is not reached yet by this window",
+    "catalog_url_status": "planned Phase 0 path on aarucien.com; the draft catalog currently serves at https://agbowen85.github.io/aarucien-storefront/catalog.json",
     "checkout": {
         "mode": "none",
         "note": "Payments are in Stripe test mode only; test mode sells nothing. No checkout URL is published until a test-mode order runs session -> webhook -> fulfillment and Aaron picks the first product + price.",
@@ -66,6 +66,6 @@
         "domain": "aarucien.com",
         "name": "Aarucien"
     },
-    "updated": "2026-11-15",
+    "updated": "2026-11-16",
     "version": "0.1.0-draft"
 }

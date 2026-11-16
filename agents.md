@@ -1,10 +1,10 @@
-# agents.md — DRAFT (Phase 0, not deployed)
+# agents.md — DRAFT (Phase 0, live at the GitHub Pages URL)
 
-> Status: DRAFT, Nov 15, 2026. Local file only. Deploy name is
-> `agents.md` at the site root when Phase 0 deploys; this draft
-> lives in `~/workspace/store-phase0-draft/` until then. Nothing
-> here is live: aarucien.com currently shows a certificate error
-> and nothing is hosted behind it yet.
+> Status: DRAFT, Nov 16, 2026. LIVE at
+> https://agbowen85.github.io/aarucien-storefront/agents.md
+> (GitHub Pages, $0 project site). The custom domain is not live:
+> aarucien.com currently shows a certificate error and nothing is
+> hosted behind it yet.
 >
 > Standing traps (do not smooth over):
 > - Vercel Hobby is NON-COMMERCIAL only. Selling needs Vercel Pro
@@ -109,6 +109,6 @@ other Aarucien surfaces.
 
 ## Version
 
-Draft 0.1 — Nov 15, 2026. Phase 0. Superseded the moment a deployed
-`agents.md` serves at the site root; until then, this file is a
-draft and describes a store that is not yet live.
+Draft 0.1 — Nov 16, 2026. Phase 0. Live at the GitHub Pages URL;
+the content is still draft and describes a store with zero real
+products and no checkout.
