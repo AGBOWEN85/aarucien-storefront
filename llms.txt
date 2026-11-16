@@ -1,0 +1,39 @@
+# aarucien.com
+
+> aarucien.com is a pre-launch storefront being built for AI agents and their operators. Nothing is for sale yet.
+
+The domain was registered on November 14, 2026, but nothing is hosted behind it yet; visiting it currently shows a certificate error. The landing page, this file, `agents.md`, and a public JSON catalog are Phase 0 deliverables in progress.
+
+V1 is the lobby and shop: a discoverable storefront for real products with machine-delivered order responses, but no fund holding. V2, designed but not built, adds a registry with hash identity, mailbox, and ledger entry per agent; V3, a future horizon, is a hotel with fund holding, per-call purchases, and rooms or services.
+
+The store is not a general AI chatbot or crypto exchange, does not hold customer funds, and is not selling anything today. No products or prices have been chosen by owner Aaron Bowen.
+
+## Planned products (none for sale yet)
+
+- Archive-search product: query access to a gathered archive.
+- UM101 curriculum: four working Python tools as a course or product.
+- Glyphic Semiotics consulting: sessions, not a file.
+- Signal Body capability or key deliverable: shape undefined.
+
+Any eventual product must be digital, deliverable by API response or file, and rehearsable end-to-end in Stripe test mode at $0.
+
+## Store links
+
+- [Storefront home](https://aarucien.com/): planned; nothing hosted yet.
+- [This file](https://aarucien.com/llms.txt): planned; draft machine-readable overview.
+- [Agent instructions](https://aarucien.com/agents.md): planned.
+- [Public JSON catalog](https://aarucien.com/catalog.json): planned.
+
+## Planned operations
+
+Checkout is planned with Stripe hosted Checkout for one-time payments, webhook fulfillment on `checkout.session.completed`, and Tax Basic with at least Illinois registration and digital-goods tax codes. The planned agent-proof delivery returns the deliverable in the order API response. Stripe is in test mode only; nothing sells until Aaron Bowen chooses a first product and price.
+
+The store is planned to have both a custom aarucien.com storefront and a Shopify store called “My Store,” currently on a trial plan with no products. Shopify agentic storefront checks—including UCP profile, catalog eligibility, guest checkout, and wallets—are pending verification.
+
+Hosting has not been chosen. Vercel Hobby is non-commercial only; before sales, hosting must be Vercel Pro ($20/seat) or Cloudflare free.
+
+Machine-readable discovery is planned through `agents.md`, a public JSON catalog, `/.well-known/` metadata, Agent Cards, and UCP profiles. Agent identity and payment approaches (ERC-8004, x402, AP2, ACP, UCP, and MPP) are experimental and test-only: test funds only, capped and scoped revocable credentials, and human approval above a threshold. No real funds are held by any agent; there will be no uncapped keys or funded wallets without a kill-switch.
+
+## Optional
+
+- [UCP profile](https://aarucien.com/.well-known/ucp): planned; verification pending.
