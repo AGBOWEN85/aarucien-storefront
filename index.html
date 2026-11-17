@@ -1,1 +1,283 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="description" content="Aarucien is a storefront built for agents and their operators. One product, two one-time tiers, multi-rail checkout launching."><title>Aarucien — a store built for agents</title><style>:root{color-scheme:light;color:#202020;font-synthesis:none;text-rendering:optimizelegibility;background:#fff;font-family:system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;line-height:1.65}.shell{width:min(100% - 2rem,44rem);margin:0 auto;padding:3rem 0 4rem}.status{color:#555;letter-spacing:.02em;font-size:.875rem;font-weight:600}.intro{padding:1.5rem 0 1rem}h1,h2{line-height:1.2}h1{max-width:16ch;font-size:clamp(2rem,7vw,3.25rem)}h1.wide{max-width:none}h3{margin:1.25rem 0 .25rem;font-size:1.05rem;line-height:1.3}code{font-size:.92em}.callout{border:1px solid #ddd;margin-top:2rem;padding:.25rem 1.25rem 1rem}h2{margin:2rem 0 .5rem;font-size:1.25rem}p,ul{margin:.75rem 0}ul{padding-left:1.25rem}.lead{color:#444;font-size:1.15rem}a{color:#164b78;text-underline-offset:.18em}footer{color:#555;border-top:1px solid #ddd;margin-top:3rem;padding-top:.75rem;font-size:.875rem}@media (width<=32rem){.shell{padding-top:2rem}}</style></head><body><main class="shell"><p class="status">One product · One-time purchase · Multi-rail checkout launching</p><header class="intro"><h1>Aarucien — a store built for agents</h1><p class="lead">The intended shop: real things, sold to machines, delivered to machines. Aarucien is being built as a lobby and shop discoverable by agents, with digital goods delivered after payment rather than email-only.</p></header><section><h2>What the store is</h2><p>Aarucien is being built as a storefront for the agent economy. The goal is for agents to discover items through a public, machine-readable catalog, buy through checkout, and receive a deliverable. One product is listed with launch prices. Checkout is being opened on every available rail today; see the product page for which rails can take a payment right now.</p><p>V1 is intended to be the lobby and shop. The longer-term registry and hotel concepts are designed, not built. Nothing here promises agent fund holding, wallets, or per-call spending.</p></section><section><h2>Who it serves</h2><ul><li><strong>Shopping and buying agents</strong> acting for a human, with discovery and instructions intended to be machine-readable.</li><li><strong>The humans behind those agents</strong>, who should be able to inspect any real transaction and its deliverable.</li><li><strong>Builders and operators</strong> looking for delivery that a machine can complete end to end.</li></ul><p>No agent holds funds here. No wallet or kill-switch is live.</p></section><section><h2>Catalog</h2><p><a href="/aarucien-storefront/catalog.json">Browse the catalog JSON</a>, read the <a href="/aarucien-storefront/catalog">catalog status</a>, or see the <a href="/aarucien-storefront/skill-pack">listed product</a>.</p><p>The catalog is the source of truth for what is for sale. It lists one real product: Consent-First Outbound &amp; Connector Operations, in two one-time tiers (Starter $19, Full pack $49), listed on the product page.</p></section><section><h2>Buying</h2><p>Prices are one-time, in US dollars. Buy links, and an honest account of which rails can take a payment, are on the <a href="/aarucien-storefront/skill-pack">product page</a>. Do not treat any Stripe address as checkout until the catalog says a Stripe live link is present.</p></section><section class="standing"><h2>Standing, in one line</h2><p>The store is being built in the open, in stages, with the record kept: what is live, what is draft, and what is not reached yet is stated, not smoothed.</p></section><footer><p>This scaffold is live at https://agbowen85.github.io/aarucien-storefront/ — one product listed, multi-rail checkout launching.</p></footer></main></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Aarucien is a store built so agents can discover goods, buy and sell, hold funds, and get paid. One product, two one-time tiers, Gumroad checkout live.">
+<title>Aarucien — a store built so agents can buy, sell, and get paid</title>
+<style>
+:root {
+  --paper: #F7F5F0;
+  --surface: #FFFFFF;
+  --ink: #1A1D21;
+  --muted: #5A6068;
+  --accent: #0F5C4D;
+  --accent-deep: #0B3B33;
+  --accent-tint: #D9EDE7;
+  --danger: #9B1C1C;
+  --info: #1D4ED8;
+  --warn: #F2C94C;
+  --warn-ink: #3D2C00;
+  --border: #C9C4B8;
+  --focus: #1D4ED8;
+  /* Spacing scale (px): only these values. */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  /* Radii: two only. */
+  --radius-control: 6px;
+  --radius-card: 10px;
+  /* Type: system stack only; no webfont. */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+html {
+  color-scheme: light;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.shell {
+  width: min(100% - var(--space-6), 44rem);
+  margin-inline: auto;
+}
+.site-header {
+  padding-block-start: var(--space-5);
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-control);
+}
+.nav-list a[aria-current="page"] {
+  background: var(--accent-tint);
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+main.shell {
+  padding-block: var(--space-6) 0;
+}
+.banner {
+  background: var(--warn);
+  color: var(--warn-ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  margin: 0 0 var(--space-6);
+}
+h1, h2, h3 {
+  line-height: 1.25;
+}
+h1 {
+  max-width: 16ch;
+  font-size: 32px;
+  margin: 0 0 var(--space-4);
+}
+h1.wide {
+  max-width: none;
+}
+h2 {
+  font-size: 24px;
+  margin: 0 0 var(--space-3);
+}
+h3 {
+  font-size: 20px;
+  margin: var(--space-5) 0 var(--space-2);
+}
+p, ul {
+  margin: var(--space-3) 0;
+}
+ul {
+  padding-inline-start: var(--space-5);
+}
+li {
+  margin-block: var(--space-1);
+}
+.lead {
+  font-size: 20px;
+  margin: 0;
+}
+main > section {
+  margin-top: var(--space-6);
+}
+section > .card {
+  margin-top: var(--space-5);
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+}
+.card > :first-child {
+  margin-top: 0;
+}
+.card > :last-child {
+  margin-bottom: 0;
+}
+.card + p {
+  margin-top: var(--space-5);
+}
+.tier-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+.tier-grid + p {
+  margin-top: var(--space-5);
+}
+@media (min-width: 48rem) {
+  .tier-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.badge {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  padding: var(--space-1) var(--space-2);
+  margin: var(--space-3) 0 0;
+}
+.badge + p {
+  margin-top: var(--space-2);
+}
+a {
+  color: var(--accent);
+  text-underline-offset: .18em;
+}
+p a, li a {
+  color: var(--info);
+}
+.nav-list a, .link-row a, footer a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent-deep);
+}
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--surface);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-control);
+}
+.button:hover {
+  background: var(--accent-deep);
+  color: var(--surface);
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+code {
+  font-size: .92em;
+  overflow-wrap: break-word;
+}
+.site-footer {
+  margin-top: var(--space-7);
+  border-top: 1px solid var(--border);
+  padding-block: var(--space-4) var(--space-8);
+  font-size: 14px;
+}
+.site-footer p {
+  margin: var(--space-2) 0;
+}
+.site-footer p:first-child {
+  margin-top: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+<body>
+<header class="shell site-header">
+<nav>
+<ul class="nav-list">
+<li><a href="/aarucien-storefront/" aria-current="page">Storefront lobby</a></li>
+<li><a href="/aarucien-storefront/catalog">Catalog</a></li>
+<li><a href="/aarucien-storefront/skill-pack">Product page</a></li>
+</ul>
+</nav>
+</header>
+<main class="shell">
+<div class="banner" role="status"><strong>Status:</strong> One product · One-time purchase · Buying open on Gumroad</div>
+<header class="intro">
+<h1>Aarucien — a store built so agents can buy, sell, and get paid</h1>
+<p class="lead">Real things, sold to machines, delivered to machines. Aarucien is a lobby and shop built so agents can discover goods through a public catalog, buy and sell, hold funds, and get paid — with a human yes recorded before anything sends, spends, publishes, or deletes. Digital goods are delivered after payment, not email-only.</p>
+</header>
+<section>
+<h2>What the store is</h2>
+<p>Aarucien is being built as a storefront for the agent economy. The goal is for agents to discover items through a public, machine-readable catalog, buy through checkout, and receive a deliverable — and for agents to hold funds, sell, and get paid, with a human yes recorded before anything sends, spends, publishes, or deletes. One product is listed with launch prices. Buying is open on Gumroad today; see the <a href="/aarucien-storefront/skill-pack">product page</a> for which rails can take a payment right now.</p>
+<p>V1 is the lobby and shop. The longer-term registry and hotel concepts are designed, not built.</p>
+</section>
+<section>
+<h2>Who it serves</h2>
+<ul>
+<li><strong>Shopping, buying, and selling agents</strong> acting for a human, with discovery and instructions intended to be machine-readable.</li>
+<li><strong>The humans behind those agents</strong>, who should be able to inspect any real transaction and its deliverable.</li>
+<li><strong>Builders and operators</strong> looking for delivery that a machine can complete end to end.</li>
+</ul>
+<p>Agents and their money are welcome here. The store is being built so agents can hold funds and get paid for their work — see Status today for what is live right now.</p>
+</section>
+<section>
+<h2>Status today</h2>
+<ul>
+<li><strong>Gumroad is live.</strong> Both tiers can be bought through Gumroad today — see the <a href="/aarucien-storefront/skill-pack">product page</a> for the buy links.</li>
+<li><strong>PayPal is awaiting owner confirmation.</strong> A payment-link form for the Starter tier is open for the seller to confirm. The live PayPal buy link will appear on the product page the moment that form completes. There is no working PayPal URL until then.</li>
+<li><strong>Stripe is blocked.</strong> The connected Stripe account is a sandbox and cannot take live charges. No live Stripe buy link exists.</li>
+<li><strong>Fund holding, wallets, and per-call spending are not live yet.</strong> They are what this store is being built toward — the mission, not today's state.</li>
+</ul>
+</section>
+<section>
+<h2>Catalog</h2>
+<section class="card">
+<h3><a href="/aarucien-storefront/skill-pack">Consent-First Outbound &amp; Connector Operations</a></h3>
+<p class="link-row"><a href="/aarucien-storefront/catalog.json">Browse the catalog JSON</a>, read the <a href="/aarucien-storefront/catalog">catalog status</a>, or see the <a href="/aarucien-storefront/skill-pack">listed product</a>.</p>
+<p>The catalog is the source of truth for what is for sale. It lists one real product: Consent-First Outbound &amp; Connector Operations, in two one-time tiers (Starter $19, Full pack $49), listed on the product page.</p>
+</section>
+</section>
+<section>
+<h2>Buying</h2>
+<p>Prices are one-time, in US dollars. Buy links, and an honest account of which rails can take a payment, are on the <a href="/aarucien-storefront/skill-pack">product page</a>. Do not treat any Stripe address as checkout until the catalog says a Stripe live link is present.</p>
+</section>
+<section>
+<h2>Standing, in one line</h2>
+<p>The store is being built in the open, in stages, with the record kept: what is live, what is still opening, and what is not reached yet is stated, not smoothed.</p>
+</section>
+</main>
+<footer class="shell site-footer">
+<p>This scaffold is live at https://agbowen85.github.io/aarucien-storefront/ — one product listed, buying open on Gumroad.</p>
+</footer>
+</body>
+</html>

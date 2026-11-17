@@ -1,1 +1,252 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="description" content="Aarucien's catalog lists one real product, with multi-rail checkout launching."><title>Catalog — Aarucien</title><style>:root{color-scheme:light;color:#202020;font-synthesis:none;text-rendering:optimizelegibility;background:#fff;font-family:system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;line-height:1.65}.shell{width:min(100% - 2rem,44rem);margin:0 auto;padding:3rem 0 4rem}.status{color:#555;letter-spacing:.02em;font-size:.875rem;font-weight:600}.intro{padding:1.5rem 0 1rem}h1,h2{line-height:1.2}h1{max-width:16ch;font-size:clamp(2rem,7vw,3.25rem)}h1.wide{max-width:none}h3{margin:1.25rem 0 .25rem;font-size:1.05rem;line-height:1.3}code{font-size:.92em}.callout{border:1px solid #ddd;margin-top:2rem;padding:.25rem 1.25rem 1rem}h2{margin:2rem 0 .5rem;font-size:1.25rem}p,ul{margin:.75rem 0}ul{padding-left:1.25rem}.lead{color:#444;font-size:1.15rem}a{color:#164b78;text-underline-offset:.18em}footer{color:#555;border-top:1px solid #ddd;margin-top:3rem;padding-top:.75rem;font-size:.875rem}@media (width<=32rem){.shell{padding-top:2rem}}</style></head><body><main class="shell"><p class="status">Catalog status · multi-rail checkout launching</p><h1>Catalog</h1><p class="lead">One real product. Buy links and rail status are on the product page. The catalog JSON is the source of truth.</p><section><h2><a href="/aarucien-storefront/skill-pack">Consent-First Outbound &amp; Connector Operations</a></h2><p>The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method: a doctrine plan, twelve skill notes in the <code>/aarucien:*</code> namespace, a working-pattern method, a brief template with three worked exemplars, and three scheduled-job templates.</p><ul><li><strong>Starter — $19, one time:</strong> 6 assets — the doctrine plan, the four consent-first outbound skills, and the brief template.</li><li><strong>Full pack — $49, one time:</strong> all 21 assets.</li></ul><p>Prices are one-time, in US dollars. Delivery is a ZIP of Markdown files after payment, not email-only. See the <a href="/aarucien-storefront/skill-pack">product page</a> for current buy links.</p></section><p><a href="/aarucien-storefront/catalog.json">Read the catalog JSON</a></p><p><a href="/aarucien-storefront/">Return to the storefront lobby</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Aarucien's catalog lists one real product, with Gumroad checkout live.">
+<title>Catalog — Aarucien</title>
+<style>
+:root {
+  --paper: #F7F5F0;
+  --surface: #FFFFFF;
+  --ink: #1A1D21;
+  --muted: #5A6068;
+  --accent: #0F5C4D;
+  --accent-deep: #0B3B33;
+  --accent-tint: #D9EDE7;
+  --danger: #9B1C1C;
+  --info: #1D4ED8;
+  --warn: #F2C94C;
+  --warn-ink: #3D2C00;
+  --border: #C9C4B8;
+  --focus: #1D4ED8;
+  /* Spacing scale (px): only these values. */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  /* Radii: two only. */
+  --radius-control: 6px;
+  --radius-card: 10px;
+  /* Type: system stack only; no webfont. */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+html {
+  color-scheme: light;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.shell {
+  width: min(100% - var(--space-6), 44rem);
+  margin-inline: auto;
+}
+.site-header {
+  padding-block-start: var(--space-5);
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-control);
+}
+.nav-list a[aria-current="page"] {
+  background: var(--accent-tint);
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+main.shell {
+  padding-block: var(--space-6) 0;
+}
+.banner {
+  background: var(--warn);
+  color: var(--warn-ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  margin: 0 0 var(--space-6);
+}
+h1, h2, h3 {
+  line-height: 1.25;
+}
+h1 {
+  max-width: 16ch;
+  font-size: 32px;
+  margin: 0 0 var(--space-4);
+}
+h1.wide {
+  max-width: none;
+}
+h2 {
+  font-size: 24px;
+  margin: 0 0 var(--space-3);
+}
+h3 {
+  font-size: 20px;
+  margin: var(--space-5) 0 var(--space-2);
+}
+p, ul {
+  margin: var(--space-3) 0;
+}
+ul {
+  padding-inline-start: var(--space-5);
+}
+li {
+  margin-block: var(--space-1);
+}
+.lead {
+  font-size: 20px;
+  margin: 0;
+}
+main > section {
+  margin-top: var(--space-6);
+}
+section > .card {
+  margin-top: var(--space-5);
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+}
+.card > :first-child {
+  margin-top: 0;
+}
+.card > :last-child {
+  margin-bottom: 0;
+}
+.card + p {
+  margin-top: var(--space-5);
+}
+.tier-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+.tier-grid + p {
+  margin-top: var(--space-5);
+}
+@media (min-width: 48rem) {
+  .tier-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.badge {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  padding: var(--space-1) var(--space-2);
+  margin: var(--space-3) 0 0;
+}
+.badge + p {
+  margin-top: var(--space-2);
+}
+a {
+  color: var(--accent);
+  text-underline-offset: .18em;
+}
+p a, li a {
+  color: var(--info);
+}
+.nav-list a, .link-row a, footer a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent-deep);
+}
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--surface);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-control);
+}
+.button:hover {
+  background: var(--accent-deep);
+  color: var(--surface);
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+code {
+  font-size: .92em;
+  overflow-wrap: break-word;
+}
+.site-footer {
+  margin-top: var(--space-7);
+  border-top: 1px solid var(--border);
+  padding-block: var(--space-4) var(--space-8);
+  font-size: 14px;
+}
+.site-footer p {
+  margin: var(--space-2) 0;
+}
+.site-footer p:first-child {
+  margin-top: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+<body>
+<header class="shell site-header">
+<nav>
+<ul class="nav-list">
+<li><a href="/aarucien-storefront/">Storefront lobby</a></li>
+<li><a href="/aarucien-storefront/catalog" aria-current="page">Catalog</a></li>
+<li><a href="/aarucien-storefront/skill-pack">Product page</a></li>
+</ul>
+</nav>
+</header>
+<main class="shell">
+<div class="banner" role="status"><strong>Status:</strong> Catalog status · Gumroad live · PayPal awaiting owner confirmation · Stripe blocked</div>
+<h1>Catalog</h1>
+<p class="lead">One real product. Buy links and rail status are on the product page. The catalog JSON is the source of truth.</p>
+<section class="card">
+<h2><a href="/aarucien-storefront/skill-pack">Consent-First Outbound &amp; Connector Operations</a></h2>
+<p>The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method: a doctrine plan, twelve skill notes in the <code>/aarucien:*</code> namespace, a working-pattern method, a brief template with three worked exemplars, and three scheduled-job templates.</p>
+<ul>
+<li><strong>Starter — $19, one time:</strong> 6 assets — the doctrine plan, the four consent-first outbound skills, and the brief template.</li>
+<li><strong>Full pack — $49, one time:</strong> all 21 assets.</li>
+</ul>
+<p>Prices are one-time, in US dollars. Delivery is a ZIP of Markdown files after payment, not email-only. See the <a href="/aarucien-storefront/skill-pack">product page</a> for current buy links.</p>
+</section>
+</main>
+<footer class="shell site-footer">
+<p><a href="/aarucien-storefront/catalog.json">Read the catalog JSON</a></p>
+<p><a href="/aarucien-storefront/">Return to the storefront lobby</a></p>
+</footer>
+</body>
+</html>
