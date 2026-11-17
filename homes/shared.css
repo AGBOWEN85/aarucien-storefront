@@ -1,0 +1,58 @@
+/* Visual tokens follow the existing runtime board, plus the nine fire colors
+   cited from claude/2025-05-20-17f45830/part-01.md:7949-7985 T60
+   (PAGODA-HYPERCODEX.md §1c). No invented motifs. */
+:root {
+  --bg:#0b0a12; --card:#16142a; --line:#2c2850; --ink:#ece8ff; --dim:#9d97c4;
+  --gold:#e8c46a; --ok:#6ee7a8; --warn:#f6a35c; --bad:#ff6b7f;
+  --fire-1:#1a1410; --ink-1:#f2e6d0;
+  --fire-2:#1c4a3c; --ink-2:#d7ffe8;
+  --fire-3:#6b1220; --ink-3:#ffd6d6;
+  --fire-4:#cfcfd6; --ink-4:#1a1a22;
+  --fire-5:#c9a227; --ink-5:#1a1408;
+  --fire-6:#4a1a6b; --ink-6:#f0d9ff;
+  --fire-7:#d8e4ee; --ink-7:#1a2430;
+  --fire-8:#9ad7c8; --ink-8:#102018;
+  --fire-9:#f5f0d8; --ink-9:#1a1608;
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+header { padding:20px 16px 8px; text-align:center; }
+h1 { margin:0; font-size:22px; letter-spacing:.06em; color:var(--gold); }
+h2 { margin:0 0 10px; font-size:15px; color:var(--gold); text-transform:uppercase; letter-spacing:.08em; }
+h3 { margin:12px 0 6px; font-size:15px; }
+.sub, .muted { color:var(--dim); font-size:13px; }
+main { max-width:1100px; margin:0 auto; padding:8px 12px 40px; display:grid; gap:14px; }
+section, article { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; }
+a { color:#b9a6ff; }
+nav.door { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; padding:0 12px 12px; }
+nav.door a { display:inline-block; padding:6px 10px; border:1px solid var(--line); border-radius:999px; text-decoration:none; font-size:13px; }
+nav.door a.here { border-color:var(--ok); color:var(--ok); }
+.pill { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; border:1px solid var(--line); margin-left:6px; }
+.ok { color:var(--ok); border-color:var(--ok); }
+.warn { color:var(--warn); border-color:var(--warn); }
+.bad { color:var(--bad); border-color:var(--bad); }
+.light { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; background:var(--dim); vertical-align:middle; }
+.light.here, .light.carrying { background:var(--ok); box-shadow:0 0 8px var(--ok); }
+.light.resting { background:var(--gold); box-shadow:0 0 8px var(--gold); }
+.light.unknown { background:var(--warn); }
+.light.absent { background:#444; }
+.words { white-space:pre-wrap; font-size:14px; line-height:1.55; }
+.quote { border-left:3px solid var(--gold); padding:6px 10px; margin:8px 0; color:var(--ink); }
+.cite, .source { color:var(--dim); font-size:11px; }
+code { color:var(--dim); font-size:12px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+td, th { text-align:left; padding:5px 4px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--dim); font-weight:600; }
+.tier { border-radius:12px; padding:12px 14px; margin:0; border:1px solid var(--line); }
+.tier .n { font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+.stack pre, pre.stack { overflow:auto; background:#0e0c18; border:1px solid var(--line); border-radius:8px; padding:10px; font-size:12px; line-height:1.45; }
+form { display:grid; gap:8px; margin-top:8px; }
+input, textarea { background:#0e0c18; color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font:inherit; }
+button { background:#2c2850; color:var(--ink); border:1px solid var(--gold); border-radius:8px; padding:8px 14px; cursor:pointer; font:inherit; }
+button:disabled { opacity:.6; cursor:not-allowed; }
+.hp { position:absolute; left:-9999px; height:0; width:0; overflow:hidden; }
+.room-grid { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+.room-card { display:block; padding:12px; border:1px solid var(--line); border-radius:10px; text-decoration:none; color:inherit; }
+.tool { margin-top:8px; }
+footer { text-align:center; color:var(--dim); font-size:12px; padding:0 12px 30px; }
+#status-msg { min-height:1.2em; }

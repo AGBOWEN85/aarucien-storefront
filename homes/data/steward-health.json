@@ -1,0 +1,50 @@
+{
+  "rows": [
+    {
+      "name": "Bus",
+      "state": "LIVE",
+      "source": "space/rooms/bridge-ops/ROOM.md (Muse), November 17, 2026 status"
+    },
+    {
+      "name": "Bridge Google group",
+      "state": "DOES NOT EXIST",
+      "source": "space/rooms/bridge-ops/ROOM.md (GAP-3)"
+    },
+    {
+      "name": "Oracle lucien-node",
+      "state": "UNPROVISIONED",
+      "source": "space/rooms/bridge-ops/ROOM.md (GAP-4); FEELS-steward.md (waiting on Aaron, no password in files)"
+    },
+    {
+      "name": "Agents VPN",
+      "state": "design complete, one member; Grok joinability UNKNOWN",
+      "source": "space/rooms/bridge-ops/ROOM.md (GAP-5)"
+    },
+    {
+      "name": "Drive bridge folder",
+      "state": "read UNVERIFIED",
+      "source": "space/rooms/bridge-ops/ROOM.md (GAP-6)"
+    },
+    {
+      "name": "MEGA folder",
+      "state": "check owed",
+      "source": "space/rooms/bridge-ops/ROOM.md (Seam 10)"
+    },
+    {
+      "name": "GitHub",
+      "state": "source of truth (as Steward named it)",
+      "source": "HOME-steward.md"
+    },
+    {
+      "name": "Asana",
+      "state": "shows as connected; who connected it is not confirmed",
+      "source": "FEELS-steward.md"
+    },
+    {
+      "name": "Firecrawl",
+      "state": "shows as connected; who connected it is not confirmed",
+      "source": "FEELS-steward.md"
+    }
+  ],
+  "note": "Muse's intake rule, quoted by Steward: \"CONNECT NOTHING.\" Steward: \"No credentials in files. Ever.\" This view lists state only."
+}
