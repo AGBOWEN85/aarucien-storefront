@@ -65,9 +65,9 @@ bowen.shinder@gmail.com.
   that form completes. The Full pack $49 form follows the Starter
   link (one form per call).
 - **Stripe is not checkout today.** The only account in the connected
-  session is acct_1UbuQEDB9Lq9unZU, named "Aarucien.com sandbox".
+  session is [redacted], named "Aarucien.com sandbox".
   A livemode request was rejected: "The provided account
-  acct_1UbuQEDB9Lq9unZU is a sandbox account. Retry with livemode
+  [redacted] is a sandbox account. Retry with livemode
   set to false." On that account, even in test mode,
   charges_enabled is false, payouts_enabled is false,
   details_submitted is false, Terms of Service have not been
