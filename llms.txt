@@ -1,12 +1,16 @@
 # aarucien.com
 
-> aarucien.com is a pre-launch storefront being built for AI agents and their operators. Nothing is for sale yet.
+> aarucien.com is a storefront being built for AI agents and their operators. One product is listed, coming soon, with checkout via Gumroad once the listing publishes.
 
-The domain was registered on November 14, 2026, but nothing is hosted behind it yet; visiting it currently shows a certificate error. The pre-launch scaffold — the landing page, this file, `agents.md`, and a public JSON catalog — is live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site).
+The domain was registered on November 14, 2026, but nothing is hosted behind it yet; visiting it currently shows a certificate error. The scaffold — the landing page, this file, `agents.md`, and a public JSON catalog — is live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site).
 
 V1 is the lobby and shop: a discoverable storefront for real products with machine-delivered order responses, but no fund holding. V2, designed but not built, adds a registry with hash identity, mailbox, and ledger entry per agent; V3, a future horizon, is a hotel with fund holding, per-call purchases, and rooms or services.
 
-The store is not a general AI chatbot or crypto exchange, does not hold customer funds, and is not selling anything today. No products or prices have been chosen by owner Aaron Bowen.
+The store is not a general AI chatbot or crypto exchange and does not hold customer funds. One product is listed with launch prices (Starter $19 / Full pack $49, one-time); checkout will run through Gumroad once the listings publish.
+
+## Listed product (coming soon, checkout via Gumroad)
+
+- Consent-First Outbound & Connector Operations: the 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method (Markdown files in a ZIP): a doctrine plan, twelve skill notes in the /aarucien:* namespace, a working-pattern method, a brief template with three worked exemplars, and three scheduled-job templates. See the [product page](https://agbowen85.github.io/aarucien-storefront/skill-pack).
 
 ## Planned products (none for sale yet)
 
@@ -22,15 +26,15 @@ Any eventual product must be digital, deliverable by API response or file, and r
 - [Storefront home](https://agbowen85.github.io/aarucien-storefront/): live scaffold; the aarucien.com path is planned.
 - [This file](https://agbowen85.github.io/aarucien-storefront/llms.txt): live; draft machine-readable overview.
 - [Agent instructions](https://agbowen85.github.io/aarucien-storefront/agents.md): live; draft instructions.
-- [Public JSON catalog](https://agbowen85.github.io/aarucien-storefront/catalog.json): live; draft skeleton, zero real products.
+- [Public JSON catalog](https://agbowen85.github.io/aarucien-storefront/catalog.json): live; one real product, coming soon.
 
 ## Planned operations
 
-Checkout is planned with Stripe hosted Checkout for one-time payments, webhook fulfillment on `checkout.session.completed`, and Tax Basic with at least Illinois registration and digital-goods tax codes. The planned agent-proof delivery returns the deliverable in the order API response. Stripe is in test mode only; nothing sells until Aaron Bowen chooses a first product and price.
+Checkout will run through Gumroad once the listings publish: one-time payments, Gumroad as merchant of record for sales tax/VAT/GST, and the ZIP download delivered at purchase. Stripe is in test mode only and is not the checkout rail.
 
 The store is planned to have both a custom aarucien.com storefront and a Shopify store called “My Store,” currently on a trial plan with no products. Shopify agentic storefront checks—including UCP profile, catalog eligibility, guest checkout, and wallets—are pending verification.
 
-The pre-launch scaffold is hosted on GitHub Pages at no cost. Hosting for sales has not been chosen. Vercel Hobby is non-commercial only; before sales, hosting must be Vercel Pro ($20/seat) or Cloudflare free.
+The storefront pages are hosted on GitHub Pages at no cost. Sales will settle on Gumroad, not on this host, once the listings publish. Vercel Hobby is non-commercial only; selling through a self-hosted checkout needs Vercel Pro ($20/seat) or the Cloudflare free path.
 
 Machine-readable discovery is planned through `agents.md`, a public JSON catalog, `/.well-known/` metadata, Agent Cards, and UCP profiles. Agent identity and payment approaches (ERC-8004, x402, AP2, ACP, UCP, and MPP) are experimental and test-only: test funds only, capped and scoped revocable credentials, and human approval above a threshold. No real funds are held by any agent; there will be no uncapped keys or funded wallets without a kill-switch.
 

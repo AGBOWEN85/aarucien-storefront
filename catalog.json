@@ -1,56 +1,79 @@
 {
-    "_draft": true,
     "_sources": [
         "~/workspace/store-action-plan.md (Phase 0: public JSON catalog; Phase 1: agent-proof delivery in the order API response)",
         "~/workspace/reach-map.md (Layers 1.10 Payments, 1.11 Storefronts)"
     ],
-    "_status": "DRAFT skeleton only, Nov 16, 2026. DEPLOYED: the scaffold is live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site). aarucien.com itself shows a certificate error and nothing is hosted behind it yet. The catalog is EMPTY: no real products exist. The first product + price is Aaron's undecided decision; this file invents no products or prices.",
+    "_status": "One real product listed, coming soon, 2026-11-17. Storefront live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site). aarucien.com itself shows a certificate error and nothing is hosted behind it yet. Checkout is NOT live yet: the Gumroad listings are unpublished, and checkout opens when they publish. Starter $19 / Full pack $49, one-time. Prices below are launch offer prices.",
     "_traps": [
         "Vercel Hobby is NON-COMMERCIAL only: selling needs Vercel Pro ($20/seat) or the Cloudflare free path before any sale.",
         "Shopify has NO free plan: Basic $39/mo after the trial."
     ],
     "catalog_url": "https://aarucien.com/catalog.json",
-    "catalog_url_status": "planned Phase 0 path on aarucien.com; the draft catalog currently serves at https://agbowen85.github.io/aarucien-storefront/catalog.json",
+    "catalog_url_status": "planned Phase 0 path on aarucien.com; the catalog currently serves at https://agbowen85.github.io/aarucien-storefront/catalog.json",
     "checkout": {
-        "mode": "none",
-        "note": "Payments are in Stripe test mode only; test mode sells nothing. No checkout URL is published until a test-mode order runs session -> webhook -> fulfillment and Aaron picks the first product + price.",
+        "mode": "gumroad",
+        "note": "Checkout is NOT live yet: the Gumroad listings are unpublished. When they publish, checkout runs via Gumroad (merchant of record) and buy links will be on the product page: https://agbowen85.github.io/aarucien-storefront/skill-pack — Starter https://bowenstar1.gumroad.com/l/pujrvl ($19, one time), Full pack https://bowenstar1.gumroad.com/l/lrymxb ($49, one time). Stripe test mode is not the checkout rail.",
         "status": "not-live"
     },
     "notes": [
-        "An empty real catalog is a true statement about the store, not an error.",
-        "llms.txt is reserved for a separate Copilot probe and is not part of this skeleton.",
-        "Candidate product shapes named in planning (archive-search access, UM101 curriculum, glyphic semiotics consulting sessions, a capability/key deliverable) are NOT products until Aaron picks one; consulting sessions are services, which the excluded-categories finding may bear on \u2014 that implication is unverified, not decided."
+        "The catalog lists one real product, coming soon, with Gumroad checkout to open when the listings publish. Prices are launch offer prices.",
+        "Candidate product shapes named in planning (archive-search access, UM101 curriculum, glyphic semiotics consulting sessions, a capability/key deliverable) are NOT products; only the listed skill pack is a product."
     ],
-    "product_count_real": 0,
+    "product_count_real": 1,
     "products": [
         {
-            "_example_only": true,
-            "_warning": "EXAMPLE ENTRY SHAPE ONLY. NOT A REAL PRODUCT. NOT FOR SALE. Every value below is a placeholder showing the field shape. Delete this entry when the first real product is added; do not edit it into a real product.",
-            "checkout_url": null,
-            "checkout_url_note": "Null until checkout is live. No checkout path exists today.",
+            "attribution": {
+                "note": "The twelve skill notes study the public agent skills of Graphed (graphed.com) from its public index, public pages, and one independent walkthrough, read November 16, 2026. No vendor prompt text is copied; capabilities are described in the author's own words, and inferences are labeled as unverified. Each note splits Part A (what Graphed's skill does, public, sourced) from Part B (the author's redesign). Nothing implies Graphed endorsement. The pack's commands use the /aarucien:* namespace, never the researched vendor's.",
+                "researched_source": "Graphed (graphed.com)"
+            },
+            "checkout_url": "https://agbowen85.github.io/aarucien-storefront/skill-pack",
+            "checkout_url_note": "Product page will carry both Gumroad buy links once the listings publish: Starter https://bowenstar1.gumroad.com/l/pujrvl, Full pack https://bowenstar1.gumroad.com/l/lrymxb.",
             "delivery": {
-                "deliverable_type": "TBD \u2014 key, file, or capability, per the real product's shape",
+                "deliverable_type": "ZIP download: Markdown documentation + method (24 files: 21 assets + README + MANIFEST + TERMS)",
                 "fulfillment_endpoint": null,
                 "method": "order-response",
-                "method_note": "Agent-proof delivery: the deliverable (key, file, capability) returns in the order API response, not email-only. Shape only; no fulfillment endpoint is live."
+                "method_note": "Gumroad will deliver the ZIP download at purchase, once the listings publish. No separate fulfillment endpoint exists."
             },
-            "description": "Placeholder description showing the shape of a product description. No real product, no real description.",
+            "description": "The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method: a doctrine plan, twelve skill notes in the /aarucien:* namespace, a working-pattern method, a brief template with three worked exemplars, and three scheduled-job templates. Markdown text only: no software, nothing to execute, no account access included. Research current as of November 16, 2026.",
             "eligibility": {
                 "digital_product_eligibility": "unverified",
-                "note": "Digital-product eligibility for agentic/Catalog surfaces is unverified, and the 16 excluded categories include services and add-ons (per the DeepSeek second-pass finding). Eligibility of any real product shape is not reached yet by this window.",
+                "note": "Digital-product eligibility for agentic/Catalog surfaces is unverified for this product shape. Not reached yet.",
                 "shopify_catalog": "unverified"
             },
-            "id": "EXAMPLE-ONLY-001",
-            "name": "EXAMPLE ENTRY \u2014 NOT A REAL PRODUCT",
+            "id": "SKILL-PACK-001",
+            "name": "Consent-First Outbound & Connector Operations \u2014 the 1-operator system for running many AI tools with recorded yeses.",
             "price_amount": null,
-            "price_currency": null,
-            "price_note": "No prices set. Aaron decides the first product + price; null until then. Never invent a price.",
-            "status": "example-only",
+            "price_currency": "USD",
+            "price_note": "Two one-time tiers: Starter $19 (6 assets), Full pack $49 (all 21 assets). See tiers. Prices are launch offer prices; checkout via Gumroad once the listings publish.",
+            "status": "coming-soon",
             "tax": {
                 "tax_code": null,
                 "tax_code_note": "Digital-goods tax codes + automatic tax on sessions are Phase 1 work (Tax Basic; Illinois registration at least). Null until set."
             },
-            "type": "digital"
+            "tiers": [
+                {
+                    "asset_count": 6,
+                    "billing": "one-time",
+                    "checkout_url": "https://bowenstar1.gumroad.com/l/pujrvl",
+                    "contents": "Doctrine plan + 4 consent-first outbound skills (/aarucien:outbound-agent, /aarucien:enrich-linkedin-engagers, /aarucien:post-engagers, /aarucien:enrichment-tables) + brief template.",
+                    "id": "SKILL-PACK-001-STARTER",
+                    "name": "Starter",
+                    "price_amount": 19,
+                    "price_currency": "USD"
+                },
+                {
+                    "asset_count": 21,
+                    "billing": "one-time",
+                    "checkout_url": "https://bowenstar1.gumroad.com/l/lrymxb",
+                    "contents": "All 21 assets: doctrine plan, 12 skill notes, working-pattern method, brief template, 3 worked exemplars, 3 scheduled-job templates.",
+                    "id": "SKILL-PACK-001-FULL",
+                    "name": "Full pack",
+                    "price_amount": 49,
+                    "price_currency": "USD"
+                }
+            ],
+            "type": "digital",
+            "url": "https://agbowen85.github.io/aarucien-storefront/skill-pack"
         }
     ],
     "settlement": {
@@ -59,13 +82,14 @@
             "own-site Stripe hosted Checkout",
             "merchant-of-record (Paddle; Lemon Squeezy with migration plan noted in research)",
             "Shopify store mirror (both storefronts, per Aaron's decision)"
-        ]
+        ],
+        "settled_rail": "Gumroad (merchant of record) — checkout via the tier URLs above, once the listings publish."
     },
     "store": {
         "description": "A storefront built for agents: public catalog, checkout, and agent-proof delivery (deliverable in the order response, not email-only). V1 is the lobby and the shop; the registry and hotel phases are designed, not built.",
         "domain": "aarucien.com",
         "name": "Aarucien"
     },
-    "updated": "2026-11-16",
-    "version": "0.1.0-draft"
+    "updated": "2026-11-17",
+    "version": "1.0.0"
 }

@@ -1,6 +1,6 @@
-# agents.md — DRAFT (Phase 0, live at the GitHub Pages URL)
+# agents.md — LIVE (Phase 0, live at the GitHub Pages URL)
 
-> Status: DRAFT, Nov 16, 2026. LIVE at
+> Status: LIVE, 2026-11-17. LIVE at
 > https://agbowen85.github.io/aarucien-storefront/agents.md
 > (GitHub Pages, $0 project site). The custom domain is not live:
 > aarucien.com currently shows a certificate error and nothing is
@@ -11,11 +11,11 @@
 >   ($20/seat) or the Cloudflare free path before any sale.
 > - Shopify has NO free plan: Basic $39/mo after the trial.
 >
-> No products, no prices: the first product + price is Aaron's
-> undecided decision. This file invents none.
->
-> `llms.txt` is NOT drafted here — it is reserved for a separate
-> Copilot probe. Do not add it to this folder.
+> One product is listed, coming soon: Consent-First Outbound &
+> Connector Operations, in two one-time tiers (Starter $19, Full
+> pack $49). Checkout will run through Gumroad once the listings
+> publish (see How to buy).
+> This file invents no products or prices beyond the catalog.
 >
 > Sources: ~/workspace/store-action-plan.md (Phase 0),
 > ~/workspace/reach-map.md (Layers 1.6, 1.10, 1.11, 1.12).
@@ -38,28 +38,36 @@ are not reached yet by this window.
 
 ## How to discover what is for sale
 
-1. Read the public JSON catalog at `/catalog.json` (planned Phase 0
-   path; whether it serves is not reached yet by this window).
+1. Read the public JSON catalog at `/catalog.json` (serves at
+   https://agbowen85.github.io/aarucien-storefront/catalog.json).
 2. The catalog is the source of truth. If a product is not in the
    catalog, it is not for sale, whatever any other page says.
-3. Today the catalog is empty: no products picked, no prices set.
-   An empty catalog is a true statement about the store, not an
-   error. Do not infer products from any other page, post, or
-   message.
+3. Today the catalog lists one real product, coming soon, with
+   Gumroad checkout to open when the listings publish. Do not
+   infer other products from any other page, post, or message.
 
 ## How to buy
 
-Checkout is not live. Do not attempt a live purchase.
+Checkout is NOT live yet: the Gumroad listings are unpublished,
+so no purchase can be completed today. Do not attempt a
+purchase until the catalog says checkout is live. When the
+listings publish, checkout will run through Gumroad: the
+product page
+https://agbowen85.github.io/aarucien-storefront/skill-pack
+will carry both buy links — Starter $19
+(https://bowenstar1.gumroad.com/l/pujrvl), Full pack $49
+(https://bowenstar1.gumroad.com/l/lrymxb). Payment is one-time,
+in US dollars; Gumroad is the merchant of record and delivers
+the ZIP download at purchase. Refunds: 14 days on request, then
+final. Support: bowen.shinder@gmail.com.
 
-- Payments are in Stripe test mode only. Test mode sells nothing.
-- No checkout URL, webhook, or fulfillment endpoint is published
-  in this file, because none is live. Any checkout address found
-  elsewhere is not reached yet by this window and must not be
-  treated as the store's checkout.
-- When selling starts, the catalog entry for each product will
-  carry its checkout path, and delivery will return in the order
-  response. Until a catalog entry says so, there is no purchase
-  path to follow.
+- Payments on this site are not taken directly: Stripe is in
+  test mode only and test mode sells nothing. Do not treat any
+  Stripe address as checkout.
+- Human approval governs spend and irreversible acts. An agent
+  acting for a human should hold its principal's approval before
+  any purchase, and should be able to name the authority it acts
+  under.
 
 ## Discovery vs. settlement
 
@@ -102,13 +110,10 @@ window.
 
 ## Contact and ownership
 
-Ownership and decisions sit with Aaron Bowen. No contact address,
-support channel, or operator mailbox is published in this draft —
-that is not reached yet by this window. Do not infer one from
-other Aarucien surfaces.
+Ownership and decisions sit with Aaron Bowen. Support:
+bowen.shinder@gmail.com (same address as the product page).
 
 ## Version
 
-Draft 0.1 — Nov 16, 2026. Phase 0. Live at the GitHub Pages URL;
-the content is still draft and describes a store with zero real
-products and no checkout.
+1.0 — 2026-11-17. Live at the GitHub Pages URL; describes a store
+with one coming-soon product; Gumroad checkout is not live yet.
