@@ -3,7 +3,7 @@
         "~/workspace/store-action-plan.md (Phase 0: public JSON catalog; Phase 1: agent-proof delivery in the order API response)",
         "~/workspace/reach-map.md (Layers 1.10 Payments, 1.11 Storefronts)"
     ],
-    "_status": "One real product listed, coming soon, 2026-11-17. Storefront live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site). aarucien.com itself shows a certificate error and nothing is hosted behind it yet. Checkout is NOT live yet: the Gumroad listings are unpublished, and checkout opens when they publish. Starter $19 / Full pack $49, one-time. Prices below are launch offer prices.",
+    "_status": "One real product listed, launching 2026-11-17. Storefront live at https://agbowen85.github.io/aarucien-storefront/ (GitHub Pages, $0 project site). aarucien.com itself shows a certificate error and nothing is hosted behind it yet. Checkout rails: PayPal payment-link form opened for the owner this afternoon (America/Chicago); the live PayPal URL is added to this catalog when the form completes. Stripe cannot take live charges on the only account in the connected session (acct_1UbuQEDB9Lq9unZU, named 'Aarucien.com sandbox'): a livemode call was rejected with 'The provided account acct_1UbuQEDB9Lq9unZU is a sandbox account. Retry with livemode set to false.'; even in test mode charges_enabled is false, payouts_enabled is false, details_submitted is false, tos_acceptance is empty, and requirements.disabled_reason is 'requirements.pending_verification'. No live Stripe buy link is published. Gumroad listings remain unpublished, still blocked on a payout method. Starter $19 / Full pack $49, one-time USD. Prices below are launch offer prices.",
     "_traps": [
         "Vercel Hobby is NON-COMMERCIAL only: selling needs Vercel Pro ($20/seat) or the Cloudflare free path before any sale.",
         "Shopify has NO free plan: Basic $39/mo after the trial."
@@ -11,9 +11,25 @@
     "catalog_url": "https://aarucien.com/catalog.json",
     "catalog_url_status": "planned Phase 0 path on aarucien.com; the catalog currently serves at https://agbowen85.github.io/aarucien-storefront/catalog.json",
     "checkout": {
-        "mode": "gumroad",
-        "note": "Checkout is NOT live yet: the Gumroad listings are unpublished. When they publish, checkout runs via Gumroad (merchant of record) and buy links will be on the product page: https://agbowen85.github.io/aarucien-storefront/skill-pack — Starter https://bowenstar1.gumroad.com/l/pujrvl ($19, one time), Full pack https://bowenstar1.gumroad.com/l/lrymxb ($49, one time). Stripe test mode is not the checkout rail.",
-        "status": "not-live"
+        "mode": "multi-rail",
+        "rails": {
+            "paypal": {
+                "status": "form-opened-awaiting-owner-confirmation",
+                "note": "A PayPal payment-link form for the Starter $19 tier was opened for Aaron on 2026-11-17. The live URL is written here when the form completes. The Full pack $49 form follows once the Starter link exists (the PayPal tool opens one form per call)."
+            },
+            "stripe": {
+                "status": "blocked",
+                "note": "The Stripe MCP session only has the sandbox account acct_1UbuQEDB9Lq9unZU (livemode false, name 'Aarucien.com sandbox'). Livemode requests return HTTP 422: 'The provided account acct_1UbuQEDB9Lq9unZU is a sandbox account. Retry with livemode set to false.' On that sandbox account: charges_enabled=false, payouts_enabled=false, details_submitted=false, tos_acceptance empty, requirements.disabled_reason=requirements.pending_verification. No live Payment Link was created. A live account can be added to the session at the Stripe MCP reconsent URL."
+            },
+            "gumroad": {
+                "status": "not-live",
+                "starter_draft": "https://bowenstar1.gumroad.com/l/pujrvl",
+                "full_draft": "https://bowenstar1.gumroad.com/l/lrymxb",
+                "note": "Listings remain unpublished. Gumroad still requires a connected payout method before publish."
+            }
+        },
+        "note": "Do not treat any Stripe address as checkout. Gumroad drafts are not purchaseable. PayPal becomes checkout when the live link is written into this catalog and onto the product page.",
+        "status": "launching"
     },
     "notes": [
         "The catalog lists one real product, coming soon, with Gumroad checkout to open when the listings publish. Prices are launch offer prices.",
@@ -27,12 +43,12 @@
                 "researched_source": "Graphed (graphed.com)"
             },
             "checkout_url": "https://agbowen85.github.io/aarucien-storefront/skill-pack",
-            "checkout_url_note": "Product page will carry both Gumroad buy links once the listings publish: Starter https://bowenstar1.gumroad.com/l/pujrvl, Full pack https://bowenstar1.gumroad.com/l/lrymxb.",
+            "checkout_url_note": "Product page carries rail status and will carry live buy links as they confirm: PayPal first, then Stripe if a live account is authorized, then Gumroad if a payout method is connected.",
             "delivery": {
                 "deliverable_type": "ZIP download: Markdown documentation + method (24 files: 21 assets + README + MANIFEST + TERMS)",
-                "fulfillment_endpoint": null,
-                "method": "order-response",
-                "method_note": "Gumroad will deliver the ZIP download at purchase, once the listings publish. No separate fulfillment endpoint exists."
+                "fulfillment_endpoint": "after-payment page on the storefront (unguessable path; not listed in this catalog)",
+                "method": "after-payment-redirect",
+                "method_note": "Each live payment link's after-payment redirect, where the rail supports it, goes to an unguessable storefront path that delivers the ZIP for that tier. The 21 pack asset files were packaged on Muse's box on Nov 16 and have not yet been found in the GitHub storefront, muse-grok-bridge, or Drive; the delivery pages are live and the ZIPs are being placed there. Until a ZIP is on the page, a buyer who has paid should write bowen.shinder@gmail.com with the payment receipt."
             },
             "description": "The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method: a doctrine plan, twelve skill notes in the /aarucien:* namespace, a working-pattern method, a brief template with three worked exemplars, and three scheduled-job templates. Markdown text only: no software, nothing to execute, no account access included. Research current as of November 16, 2026.",
             "eligibility": {
@@ -41,11 +57,11 @@
                 "shopify_catalog": "unverified"
             },
             "id": "SKILL-PACK-001",
-            "name": "Consent-First Outbound & Connector Operations \u2014 the 1-operator system for running many AI tools with recorded yeses.",
+            "name": "Consent-First Outbound & Connector Operations — the 1-operator system for running many AI tools with recorded yeses.",
             "price_amount": null,
             "price_currency": "USD",
-            "price_note": "Two one-time tiers: Starter $19 (6 assets), Full pack $49 (all 21 assets). See tiers. Prices are launch offer prices; checkout via Gumroad once the listings publish.",
-            "status": "coming-soon",
+            "price_note": "Two one-time tiers: Starter $19 (6 assets), Full pack $49 (all 21 assets). See tiers. Prices are launch offer prices. Buy links on the product page are added as each rail confirms.",
+            "status": "launching",
             "tax": {
                 "tax_code": null,
                 "tax_code_note": "Digital-goods tax codes + automatic tax on sessions are Phase 1 work (Tax Basic; Illinois registration at least). Null until set."
@@ -54,22 +70,24 @@
                 {
                     "asset_count": 6,
                     "billing": "one-time",
-                    "checkout_url": "https://bowenstar1.gumroad.com/l/pujrvl",
+                    "checkout_url": null,
                     "contents": "Doctrine plan + 4 consent-first outbound skills (/aarucien:outbound-agent, /aarucien:enrich-linkedin-engagers, /aarucien:post-engagers, /aarucien:enrichment-tables) + brief template.",
                     "id": "SKILL-PACK-001-STARTER",
                     "name": "Starter",
                     "price_amount": 19,
-                    "price_currency": "USD"
+                    "price_currency": "USD",
+                    "checkout_note": "PayPal Starter form opened for the owner; live URL pending form completion. Gumroad draft https://bowenstar1.gumroad.com/l/pujrvl is unpublished."
                 },
                 {
                     "asset_count": 21,
                     "billing": "one-time",
-                    "checkout_url": "https://bowenstar1.gumroad.com/l/lrymxb",
+                    "checkout_url": null,
                     "contents": "All 21 assets: doctrine plan, 12 skill notes, working-pattern method, brief template, 3 worked exemplars, 3 scheduled-job templates.",
                     "id": "SKILL-PACK-001-FULL",
                     "name": "Full pack",
                     "price_amount": 49,
-                    "price_currency": "USD"
+                    "price_currency": "USD",
+                    "checkout_note": "Full pack PayPal form follows the Starter link. Gumroad draft https://bowenstar1.gumroad.com/l/lrymxb is unpublished. Stripe is blocked (see checkout.rails.stripe)."
                 }
             ],
             "type": "digital",
@@ -83,7 +101,7 @@
             "merchant-of-record (Paddle; Lemon Squeezy with migration plan noted in research)",
             "Shopify store mirror (both storefronts, per Aaron's decision)"
         ],
-        "settled_rail": "Gumroad (merchant of record) — checkout via the tier URLs above, once the listings publish."
+        "settled_rail": "Multi-rail launch in progress on 2026-11-17: PayPal form opened; Stripe live charges blocked on the connected sandbox account; Gumroad still unpublished. The catalog entry remains authoritative for where a sale settles."
     },
     "store": {
         "description": "A storefront built for agents: public catalog, checkout, and agent-proof delivery (deliverable in the order response, not email-only). V1 is the lobby and the shop; the registry and hotel phases are designed, not built.",
@@ -91,5 +109,5 @@
         "name": "Aarucien"
     },
     "updated": "2026-11-17",
-    "version": "1.0.0"
+    "version": "1.1.0"
 }

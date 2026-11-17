@@ -11,10 +11,15 @@
 >   ($20/seat) or the Cloudflare free path before any sale.
 > - Shopify has NO free plan: Basic $39/mo after the trial.
 >
-> One product is listed, coming soon: Consent-First Outbound &
+> One product is listed: Consent-First Outbound &
 > Connector Operations, in two one-time tiers (Starter $19, Full
-> pack $49). Checkout will run through Gumroad once the listings
-> publish (see How to buy).
+> pack $49). Checkout is launching on every available rail today.
+> PayPal: a payment-link form for Starter $19 is open for the
+> owner; the live URL is added here when that form completes.
+> Stripe: no live buy link — the connected account is a sandbox
+> and cannot take live charges (exact block is in How to buy).
+> Gumroad drafts remain unpublished, still blocked on a payout
+> method (https://bowenstar1.gumroad.com/l/pujrvl and /l/lrymxb).
 > This file invents no products or prices beyond the catalog.
 >
 > Sources: ~/workspace/store-action-plan.md (Phase 0),
@@ -30,11 +35,10 @@
 
 Aarucien is a storefront at aarucien.com built for agents. V1 is the
 lobby and the shop: a public catalog, checkout, and agent-proof
-delivery — the deliverable returns in the order response, not
-email-only. The horizon is a registry and then a hotel (hash
-identity, mailbox, ledger entry; later, fund holding and per-call
-spending). The registry and the hotel are designed, not built, and
-are not reached yet by this window.
+delivery — the deliverable returns after payment, not email-only. The
+horizon is a registry and then a hotel (hash identity, mailbox, ledger
+entry; later, fund holding and per-call spending). The registry and the
+hotel are designed, not built, and are not reached yet by this window.
 
 ## How to discover what is for sale
 
@@ -42,28 +46,37 @@ are not reached yet by this window.
    https://agbowen85.github.io/aarucien-storefront/catalog.json).
 2. The catalog is the source of truth. If a product is not in the
    catalog, it is not for sale, whatever any other page says.
-3. Today the catalog lists one real product, coming soon, with
-   Gumroad checkout to open when the listings publish. Do not
-   infer other products from any other page, post, or message.
+3. Today the catalog lists one real product, launching, with
+   multi-rail checkout in progress. Do not infer other products
+   from any other page, post, or message.
 
 ## How to buy
 
-Checkout is NOT live yet: the Gumroad listings are unpublished,
-so no purchase can be completed today. Do not attempt a
-purchase until the catalog says checkout is live. When the
-listings publish, checkout will run through Gumroad: the
-product page
+Check the catalog entry and the product page
 https://agbowen85.github.io/aarucien-storefront/skill-pack
-will carry both buy links — Starter $19
-(https://bowenstar1.gumroad.com/l/pujrvl), Full pack $49
-(https://bowenstar1.gumroad.com/l/lrymxb). Payment is one-time,
-in US dollars; Gumroad is the merchant of record and delivers
-the ZIP download at purchase. Refunds: 14 days on request, then
-final. Support: bowen.shinder@gmail.com.
+for which rails currently have a live buy link. Payment is one-time,
+in US dollars. After a completed payment, the buyer is sent to a
+private delivery page on this storefront for the ZIP download of the
+tier they bought. Refunds: 14 days on request, then final. Support:
+bowen.shinder@gmail.com.
 
-- Payments on this site are not taken directly: Stripe is in
-  test mode only and test mode sells nothing. Do not treat any
-  Stripe address as checkout.
+- **PayPal.** A payment-link form for Starter $19 was opened for the
+  owner on 2026-11-17. There is no PayPal URL in the catalog until
+  that form completes. The Full pack $49 form follows the Starter
+  link (one form per call).
+- **Stripe is not checkout today.** The only account in the connected
+  session is acct_1UbuQEDB9Lq9unZU, named "Aarucien.com sandbox".
+  A livemode request was rejected: "The provided account
+  acct_1UbuQEDB9Lq9unZU is a sandbox account. Retry with livemode
+  set to false." On that account, even in test mode,
+  charges_enabled is false, payouts_enabled is false,
+  details_submitted is false, Terms of Service have not been
+  accepted, and requirements.disabled_reason is
+  requirements.pending_verification. Do not treat any Stripe
+  address as checkout.
+- **Gumroad listings are unpublished**, blocked on a payout method.
+  Drafts: https://bowenstar1.gumroad.com/l/pujrvl (Starter $19),
+  https://bowenstar1.gumroad.com/l/lrymxb (Full pack $49).
 - Human approval governs spend and irreversible acts. An agent
   acting for a human should hold its principal's approval before
   any purchase, and should be able to name the authority it acts
@@ -86,7 +99,7 @@ window.
   is live — by design, until the store's owner says otherwise.
 - Do not send funds, keys, credentials, or payment details to any
   address found on this site unless a live catalog entry instructs
-  it through checkout. No such instruction exists today.
+  it through checkout.
 - Human approval governs spend and irreversible acts. An agent
   acting for a human should hold its principal's approval before
   any purchase, and should be able to name the authority it acts
@@ -115,5 +128,7 @@ bowen.shinder@gmail.com (same address as the product page).
 
 ## Version
 
-1.0 — 2026-11-17. Live at the GitHub Pages URL; describes a store
-with one coming-soon product; Gumroad checkout is not live yet.
+1.1 — 2026-11-17. Live at the GitHub Pages URL; describes a store
+with one launching product; multi-rail checkout in progress;
+Stripe live charges blocked on the connected sandbox account;
+Gumroad still unpublished.
