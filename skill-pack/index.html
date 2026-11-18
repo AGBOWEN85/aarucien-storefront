@@ -1,331 +1,194 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="description" content="Consent-First Outbound &amp; Connector Operations — the 1-operator system for running many AI tools with recorded yeses. A one-time download. Gumroad checkout live.">
-<title>Consent-First Outbound &amp; Connector Operations — Aarucien</title>
-<style>
-:root {
-  --paper: #F7F5F0;
-  --surface: #FFFFFF;
-  --ink: #1A1D21;
-  --muted: #5A6068;
-  --accent: #0F5C4D;
-  --accent-deep: #0B3B33;
-  --accent-tint: #D9EDE7;
-  --danger: #9B1C1C;
-  --info: #1D4ED8;
-  --warn: #F2C94C;
-  --warn-ink: #3D2C00;
-  --border: #C9C4B8;
-  --focus: #1D4ED8;
-  /* Spacing scale (px): only these values. */
-  --space-0: 0;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 24px;
-  --space-6: 32px;
-  --space-7: 48px;
-  --space-8: 64px;
-  /* Radii: two only. */
-  --radius-control: 6px;
-  --radius-card: 10px;
-  /* Type: system stack only; no webfont. */
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-html {
-  color-scheme: light;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-}
-.shell {
-  width: min(100% - var(--space-6), 44rem);
-  margin-inline: auto;
-}
-.site-header {
-  padding-block-start: var(--space-5);
-}
-.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.nav-list a {
-  display: inline-block;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-control);
-}
-.nav-list a[aria-current="page"] {
-  background: var(--accent-tint);
-  color: var(--accent-deep);
-  font-weight: 600;
-}
-main.shell {
-  padding-block: var(--space-6) 0;
-}
-.banner {
-  background: var(--warn);
-  color: var(--warn-ink);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  padding: var(--space-4);
-  margin: 0 0 var(--space-6);
-}
-h1, h2, h3 {
-  line-height: 1.25;
-}
-h1 {
-  max-width: 16ch;
-  font-size: 32px;
-  margin: 0 0 var(--space-4);
-}
-h1.wide {
-  max-width: none;
-}
-h2 {
-  font-size: 24px;
-  margin: 0 0 var(--space-3);
-}
-h3 {
-  font-size: 20px;
-  margin: var(--space-5) 0 var(--space-2);
-}
-p, ul {
-  margin: var(--space-3) 0;
-}
-ul {
-  padding-inline-start: var(--space-5);
-}
-li {
-  margin-block: var(--space-1);
-}
-.lead {
-  font-size: 20px;
-  margin: 0;
-}
-main > section {
-  margin-top: var(--space-6);
-}
-section > .card {
-  margin-top: var(--space-5);
-}
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  padding: var(--space-5);
-}
-.card > :first-child {
-  margin-top: 0;
-}
-.card > :last-child {
-  margin-bottom: 0;
-}
-.card + p {
-  margin-top: var(--space-5);
-}
-.tier-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-5);
-}
-.tier-grid + p {
-  margin-top: var(--space-5);
-}
-@media (min-width: 48rem) {
-  .tier-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.badge {
-  display: inline-block;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-control);
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 600;
-  padding: var(--space-1) var(--space-2);
-  margin: var(--space-3) 0 0;
-}
-.badge + p {
-  margin-top: var(--space-2);
-}
-a {
-  color: var(--accent);
-  text-underline-offset: .18em;
-}
-p a, li a {
-  color: var(--info);
-}
-.nav-list a, .link-row a, footer a {
-  color: var(--accent);
-}
-a:hover {
-  color: var(--accent-deep);
-}
-.button {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--surface);
-  font-weight: 600;
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-control);
-}
-.button:hover {
-  background: var(--accent-deep);
-  color: var(--surface);
-}
-:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-}
-code {
-  font-size: .92em;
-  overflow-wrap: break-word;
-}
-.site-footer {
-  margin-top: var(--space-7);
-  border-top: 1px solid var(--border);
-  padding-block: var(--space-4) var(--space-8);
-  font-size: 14px;
-}
-.site-footer p {
-  margin: var(--space-2) 0;
-}
-.site-footer p:first-child {
-  margin-top: 0;
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-</style>
-</head>
-<body>
-<header class="shell site-header">
-<nav>
-<ul class="nav-list">
-<li><a href="/aarucien-storefront/">Storefront lobby</a></li>
-<li><a href="/aarucien-storefront/catalog">Catalog</a></li>
-<li><a href="/aarucien-storefront/skill-pack" aria-current="page">Product page</a></li>
-</ul>
-</nav>
-</header>
-<main class="shell">
-<div class="banner" role="status"><strong>Status:</strong> One-time purchase · Buying open on Gumroad · 17 November 2026</div>
-<header class="intro">
-<h1 class="wide">Consent-First Outbound &amp; Connector Operations</h1>
-<p class="lead">The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method, written from a real operating setup — not generic prompts, not software.</p>
-</header>
-<section>
-<h2>What it is</h2>
-<p>A solo operator running several AI hands against connected tools needs two things: a way to run outbound work that respects the people on the receiving end, and a way to keep many agents, many connectors, and many scheduled jobs from drifting into a mess. This pack is both, as practiced.</p>
-<p>Everything in the pack is Markdown text in a ZIP download. There is no code to install, nothing to execute, and no account access included. The pack tells you what to do and how to check it; your own tools do the doing.</p>
-<p>Research is current as of November 16, 2026. Vendor pages, plan terms, and capabilities change — re-check them before relying on any vendor claim.</p>
-</section>
-<section>
-<h2>The two rules</h2>
-<ul>
-<li><strong>Joy first.</strong> No skill ships unless it can name the joy point it plants and the person who receives it. If a skill's only advantage is finding a wound faster, it is redesigned or it does not ship.</li>
-<li><strong>Consent first.</strong> Engagement is not permission. A reply, a click, or a public profile is not a yes. Automated hands draft; a human says yes before anything sends, spends, publishes, or deletes. Every automated action leaves a receipt, and every receipt can be audited.</li>
-</ul>
-</section>
-<section>
-<h2>What's inside — the full pack (21 assets)</h2>
-<p><strong>The doctrine plan.</strong> The operating theory: the joy-first doctrine, the 12-skill stack-mapping method, and the least-privilege auth-shape rules. Read this first.</p>
-<p><strong>Twelve skill notes</strong>, each with its own command in the <code>/aarucien:*</code> namespace:</p>
-<section class="card">
-<h3>Outbound — consent-first redesigns</h3>
-<ul>
-<li><code>/aarucien:outbound-agent</code> — Cold email, draft-first: nothing sends without a human yes.</li>
-<li><code>/aarucien:enrich-linkedin-engagers</code> — Engager enrichment where the redesign, not the harvest, is the product.</li>
-<li><code>/aarucien:post-engagers</code> — Post-engager outreach as a one-shot plus standing-tool pair.</li>
-<li><code>/aarucien:enrichment-tables</code> — Enrichment tables built secret-proof, consent-first.</li>
-</ul>
-</section>
-<section class="card">
-<h3>Creative — joy-first skills</h3>
-<ul>
-<li><code>/aarucien:static-ads</code> — Static ad variants with claim verification and paused rules.</li>
-<li><code>/aarucien:ugc-video</code> — One talking-head video ad from joy-mined scripts.</li>
-<li><code>/aarucien:ugc-studio</code> — The same job as a standing team studio: a batch grid, every render verified.</li>
-<li><code>/aarucien:post-to-video</code> — A post turned into a short video with a beat of delight and respect for the viewer.</li>
-</ul>
-</section>
-<section class="card">
-<h3>Intelligence</h3>
-<ul>
-<li><code>/aarucien:ad-spy</code> — Ad intelligence with a joy-gap heat map.</li>
-<li><code>/aarucien:analytics-dashboard</code> — Reporting with a receipt rule (in-bundle method, not a standalone product).</li>
-<li><code>/aarucien:seo-agent</code> — Search work with page-two mining and human-read gating.</li>
-<li><code>/aarucien:google-ads-agent</code> — Ads method with a spend-truth rule and human-yes gating; states plainly on its face that no working integration is claimed.</li>
-</ul>
-</section>
-<p><strong>The working-pattern method.</strong> The operating discipline for a 1-operator, multi-agent setup: the automatic-hands taxonomy, ten consent boundaries, quiet-unless-changed discipline, ledger receipts, and failure behaviors.</p>
-<p><strong>The brief template and three worked exemplars.</strong> The 5-section format for writing a connector operating brief, plus three finished ones to learn from: a read-only memory feed, a pricing-research search, and a commerce protocol.</p>
-<p><strong>Three scheduled-job templates.</strong> Copy-ready job bodies for a morning money check, a shared-workspace sweep, and a price-watch radar.</p>
-</section>
-<section>
-<h2>Tiers</h2>
-<div class="tier-grid">
-<section class="card">
-<h3>Starter — $19, one time</h3>
-<p>Six assets: the doctrine plan, the four consent-first outbound skills (<code>/aarucien:outbound-agent</code>, <code>/aarucien:enrich-linkedin-engagers</code>, <code>/aarucien:post-engagers</code>, <code>/aarucien:enrichment-tables</code>), and the brief template. The outbound system, complete: doctrine, skills, and the format for writing more.</p>
-<p><a class="button" href="https://bowenstar1.gumroad.com/l/pujrvl">Buy Starter on Gumroad — $19</a></p>
-<p class="badge">Awaiting owner confirmation</p>
-<p><strong>PayPal.</strong> A payment-link form for this tier is open for the seller to confirm. The live PayPal buy link will appear here the moment that form completes. There is no working PayPal URL on this page until then.</p>
-<p class="badge">Blocked</p>
-<p><strong>Stripe.</strong> No live Stripe buy link. The connected Stripe account is a sandbox and cannot take live charges. See Purchase &amp; terms.</p>
-<p class="badge">Live</p>
-<p><strong>Gumroad.</strong> The listing is published and live. Use the buy link above to buy this tier on Gumroad.</p>
-</section>
-<section class="card">
-<h3>Full pack — $49, one time</h3>
-<p>All 21 assets listed above: the doctrine plan, all twelve skill notes, the working-pattern method, the brief template, the three worked exemplars, and the three scheduled-job templates.</p>
-<p><a class="button" href="https://bowenstar1.gumroad.com/l/lrymxb">Buy Full pack on Gumroad — $49</a></p>
-<p class="badge">Awaiting owner confirmation</p>
-<p><strong>PayPal.</strong> The Full pack payment-link form follows as soon as the Starter link is confirmed (the PayPal tool opens one form at a time). The live buy link will appear here when that form completes.</p>
-<p class="badge">Blocked</p>
-<p><strong>Stripe.</strong> No live Stripe buy link. Same sandbox block as above.</p>
-<p class="badge">Live</p>
-<p><strong>Gumroad.</strong> The listing is published and live. Use the buy link above to buy this tier on Gumroad.</p>
-</section>
-</div>
-<p>Prices are one-time, in US dollars. There is no subscription.</p>
-</section>
-<section class="card">
-<h2>How the skills were researched</h2>
-<p>The twelve skill notes study the public agent skills of one vendor — Graphed (graphed.com) — from its public index, public pages, and one independent walkthrough, read November 16, 2026. No vendor prompt text is copied; capabilities are described in the author's own words, and inferences are labeled as unverified. Every skill note is split into two labeled parts: Part A describes what Graphed's skill does, from public sources; Part B is the author's own redesign. Nothing in this pack implies endorsement by Graphed, and nothing presents Graphed's skills as the author's work. The pack's own commands use the <code>/aarucien:*</code> namespace — the seller's own name — never the researched vendor's.</p>
-</section>
-<section class="card">
-<h2>Purchase &amp; terms</h2>
-<p>Payment is one-time, in US dollars. After a completed payment, the buyer is sent to a private delivery page on this storefront for the ZIP download of the tier they bought. Refunds: 14 days on request, then final. Support: bowen.shinder@gmail.com. Illinois law governs.</p>
-<p><strong>Stripe, stated exactly.</strong> The only Stripe account in the seller's connected session is a sandbox account named “Aarucien.com sandbox.” A livemode request was rejected: “The provided account is a sandbox account. Retry with livemode set to false.” On that account, even in test mode, <code>charges_enabled</code> is false, <code>payouts_enabled</code> is false, <code>details_submitted</code> is false, Terms of Service have not been accepted, and <code>requirements.disabled_reason</code> is <code>requirements.pending_verification</code>. No Stripe Payment Link has been published, and no Stripe address on this site is checkout.</p>
-<p><strong>Gumroad.</strong> The listings are published and live.</p>
-</section>
-<p class="link-row"><a href="/aarucien-storefront/catalog">Back to the catalog</a> · <a href="/aarucien-storefront/">Return to the storefront lobby</a></p>
-</main>
-<footer class="shell site-footer">
-<p>Seller: Aarucien.</p>
-</footer>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Consent-First Outbound &amp; Connector Operations — the 1-operator system for running many AI tools with recorded yeses. A one-time download. Gumroad checkout live." />
+        <meta name="theme-color" content="#212529" />
+        <title>Consent-First Outbound &amp; Connector Operations — Aarucien</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/aarucien-storefront/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/aarucien-storefront/favicon.svg" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- Design: Start Bootstrap Shop Item v5.0.6 (MIT), https://startbootstrap.com/template/shop-item — license: css/LICENSE -->
+        <link href="/aarucien-storefront/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/aarucien-storefront/">Aarucien</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="/aarucien-storefront/">Storefront lobby</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aarucien-storefront/catalog">Catalog</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/aarucien-storefront/skill-pack">Product page</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Status-->
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="alert alert-warning" role="status"><strong>Status:</strong> One-time purchase · Buying open on Gumroad · 17 November 2026</div>
+        </div>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <h1 class="display-5 fw-bolder">Consent-First Outbound &amp; Connector Operations</h1>
+                <div class="fs-5 mb-5">
+                    <span>Starter $19 · Full pack $49</span>
+                </div>
+                <p class="lead">The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method, written from a real operating setup — not generic prompts, not software.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a class="btn btn-outline-dark flex-shrink-0" href="https://bowenstar1.gumroad.com/l/pujrvl">Buy Starter on Gumroad — $19</a>
+                    <a class="btn btn-outline-dark flex-shrink-0" href="https://bowenstar1.gumroad.com/l/lrymxb">Buy Full pack on Gumroad — $49</a>
+                </div>
+            </div>
+        </section>
+        <!-- About section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="mb-5">
+                    <h2 class="fw-bolder mb-4">What it is</h2>
+                    <p>A solo operator running several AI hands against connected tools needs two things: a way to run outbound work that respects the people on the receiving end, and a way to keep many agents, many connectors, and many scheduled jobs from drifting into a mess. This pack is both, as practiced.</p>
+                    <p>Everything in the pack is Markdown text in a ZIP download. There is no code to install, nothing to execute, and no account access included. The pack tells you what to do and how to check it; your own tools do the doing.</p>
+                    <p class="mb-0">Research is current as of November 16, 2026. Vendor pages, plan terms, and capabilities change — re-check them before relying on any vendor claim.</p>
+                </div>
+                <div>
+                    <h2 class="fw-bolder mb-4">The two rules</h2>
+                    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 justify-content-center">
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bolder">Joy first.</h3>
+                                    <p class="mb-0">No skill ships unless it can name the joy point it plants and the person who receives it. If a skill's only advantage is finding a wound faster, it is redesigned or it does not ship.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="h5 fw-bolder">Consent first.</h3>
+                                    <p class="mb-0">Engagement is not permission. A reply, a click, or a public profile is not a yes. Automated hands draft; a human says yes before anything sends, spends, publishes, or deletes. Every automated action leaves a receipt, and every receipt can be audited.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contents section-->
+        <section class="py-5 bg-light">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="fw-bolder mb-4">What's inside — the full pack (21 assets)</h2>
+                <p><strong>The doctrine plan.</strong> The operating theory: the joy-first doctrine, the 12-skill stack-mapping method, and the least-privilege auth-shape rules. Read this first.</p>
+                <p><strong>Twelve skill notes</strong>, each with its own command in the <code>/aarucien:*</code> namespace:</p>
+                <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bolder">Outbound — consent-first redesigns</h3>
+                                <ul class="mb-0">
+                                    <li><code>/aarucien:outbound-agent</code> — Cold email, draft-first: nothing sends without a human yes.</li>
+                                    <li><code>/aarucien:enrich-linkedin-engagers</code> — Engager enrichment where the redesign, not the harvest, is the product.</li>
+                                    <li><code>/aarucien:post-engagers</code> — Post-engager outreach as a one-shot plus standing-tool pair.</li>
+                                    <li><code>/aarucien:enrichment-tables</code> — Enrichment tables built secret-proof, consent-first.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bolder">Creative — joy-first skills</h3>
+                                <ul class="mb-0">
+                                    <li><code>/aarucien:static-ads</code> — Static ad variants with claim verification and paused rules.</li>
+                                    <li><code>/aarucien:ugc-video</code> — One talking-head video ad from joy-mined scripts.</li>
+                                    <li><code>/aarucien:ugc-studio</code> — The same job as a standing team studio: a batch grid, every render verified.</li>
+                                    <li><code>/aarucien:post-to-video</code> — A post turned into a short video with a beat of delight and respect for the viewer.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bolder">Intelligence</h3>
+                                <ul class="mb-0">
+                                    <li><code>/aarucien:ad-spy</code> — Ad intelligence with a joy-gap heat map.</li>
+                                    <li><code>/aarucien:analytics-dashboard</code> — Reporting with a receipt rule (in-bundle method, not a standalone product).</li>
+                                    <li><code>/aarucien:seo-agent</code> — Search work with page-two mining and human-read gating.</li>
+                                    <li><code>/aarucien:google-ads-agent</code> — Ads method with a spend-truth rule and human-yes gating; states plainly on its face that no working integration is claimed.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><strong>The working-pattern method.</strong> The operating discipline for a 1-operator, multi-agent setup: the automatic-hands taxonomy, ten consent boundaries, quiet-unless-changed discipline, ledger receipts, and failure behaviors.</p>
+                <p><strong>The brief template and three worked exemplars.</strong> The 5-section format for writing a connector operating brief, plus three finished ones to learn from: a read-only memory feed, a pricing-research search, and a commerce protocol.</p>
+                <p class="mb-0"><strong>Three scheduled-job templates.</strong> Copy-ready job bodies for a morning money check, a shared-workspace sweep, and a price-watch radar.</p>
+            </div>
+        </section>
+        <!-- Tiers section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5">
+                <h2 class="fw-bolder mb-4">Tiers</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bolder">Starter — $19, one time</h3>
+                                <p>Six assets: the doctrine plan, the four consent-first outbound skills (<code>/aarucien:outbound-agent</code>, <code>/aarucien:enrich-linkedin-engagers</code>, <code>/aarucien:post-engagers</code>, <code>/aarucien:enrichment-tables</code>), and the brief template. The outbound system, complete: doctrine, skills, and the format for writing more.</p>
+                                <p><a class="btn btn-outline-dark" href="https://bowenstar1.gumroad.com/l/pujrvl">Buy Starter on Gumroad — $19</a></p>
+                                <p><span class="badge bg-warning text-dark">Awaiting owner confirmation</span></p>
+                                <p><strong>PayPal.</strong> A payment-link form for this tier is open for the seller to confirm. The live PayPal buy link will appear here the moment that form completes. There is no working PayPal URL on this page until then.</p>
+                                <p><span class="badge bg-danger">Blocked</span></p>
+                                <p><strong>Stripe.</strong> No live Stripe buy link. The connected Stripe account is a sandbox and cannot take live charges. See Purchase &amp; terms.</p>
+                                <p><span class="badge bg-success">Live</span></p>
+                                <p class="mb-0"><strong>Gumroad.</strong> The listing is published and live. Use the buy link above to buy this tier on Gumroad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bolder">Full pack — $49, one time</h3>
+                                <p>All 21 assets listed above: the doctrine plan, all twelve skill notes, the working-pattern method, the brief template, the three worked exemplars, and the three scheduled-job templates.</p>
+                                <p><a class="btn btn-outline-dark" href="https://bowenstar1.gumroad.com/l/lrymxb">Buy Full pack on Gumroad — $49</a></p>
+                                <p><span class="badge bg-warning text-dark">Awaiting owner confirmation</span></p>
+                                <p><strong>PayPal.</strong> The Full pack payment-link form follows as soon as the Starter link is confirmed (the PayPal tool opens one form at a time). The live buy link will appear here when that form completes.</p>
+                                <p><span class="badge bg-danger">Blocked</span></p>
+                                <p><strong>Stripe.</strong> No live Stripe buy link. Same sandbox block as above.</p>
+                                <p><span class="badge bg-success">Live</span></p>
+                                <p class="mb-0"><strong>Gumroad.</strong> The listing is published and live. Use the buy link above to buy this tier on Gumroad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="mb-0">Prices are one-time, in US dollars. There is no subscription.</p>
+            </div>
+        </section>
+        <!-- Terms section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="card mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="h5 fw-bolder">How the skills were researched</h2>
+                        <p class="mb-0">The twelve skill notes study the public agent skills of one vendor — Graphed (graphed.com) — from its public index, public pages, and one independent walkthrough, read November 16, 2026. No vendor prompt text is copied; capabilities are described in the author's own words, and inferences are labeled as unverified. Every skill note is split into two labeled parts: Part A describes what Graphed's skill does, from public sources; Part B is the author's own redesign. Nothing in this pack implies endorsement by Graphed, and nothing presents Graphed's skills as the author's work. The pack's own commands use the <code>/aarucien:*</code> namespace — the seller's own name — never the researched vendor's.</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="h5 fw-bolder">Purchase &amp; terms</h2>
+                        <p>Payment is one-time, in US dollars. After a completed payment, the buyer is sent to a private delivery page on this storefront for the ZIP download of the tier they bought. Refunds: 14 days on request, then final. Support: bowen.shinder@gmail.com. Illinois law governs.</p>
+                        <p><strong>Stripe, stated exactly.</strong> The only Stripe account in the seller's connected session is a sandbox account named “Aarucien.com sandbox.” A livemode request was rejected: “The provided account is a sandbox account. Retry with livemode set to false.” On that account, even in test mode, <code>charges_enabled</code> is false, <code>payouts_enabled</code> is false, <code>details_submitted</code> is false, Terms of Service have not been accepted, and <code>requirements.disabled_reason</code> is <code>requirements.pending_verification</code>. No Stripe Payment Link has been published, and no Stripe address on this site is checkout.</p>
+                        <p class="mb-0"><strong>Gumroad.</strong> The listings are published and live.</p>
+                    </div>
+                </div>
+                <p class="mb-0"><a href="/aarucien-storefront/catalog">Back to the catalog</a> · <a href="/aarucien-storefront/">Return to the storefront lobby</a></p>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Seller: Aarucien.</p></div>
+        </footer>
+    </body>
 </html>
