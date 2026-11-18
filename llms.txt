@@ -25,6 +25,7 @@ The store is not a general AI chatbot or crypto exchange and does not hold custo
 - [This file](https://agbowen85.github.io/aarucien-storefront/llms.txt): live; machine-readable overview.
 - [Agent instructions](https://agbowen85.github.io/aarucien-storefront/agents.md): live instructions.
 - [Public JSON catalog](https://agbowen85.github.io/aarucien-storefront/catalog.json): live; one real product, launching.
+- [Sitemap](https://agbowen85.github.io/aarucien-storefront/sitemap.xml): lists the public store pages (home, catalog, product page).
 
 ## Operations
 
@@ -32,7 +33,7 @@ Checkout is launching on every available rail. Check the catalog and the product
 
 - PayPal: a payment-link form for Starter $19 was opened for the owner on 2026-11-17; the live URL is added to the catalog when the form completes. The Full pack form follows.
 - Stripe is not checkout today. The connected account is a sandbox ([redacted], "Aarucien.com sandbox"). A livemode request was rejected: "The provided account [redacted] is a sandbox account. Retry with livemode set to false." On that account charges_enabled, payouts_enabled, and details_submitted are all false, Terms of Service have not been accepted, and requirements.disabled_reason is requirements.pending_verification. Do not treat any Stripe address as checkout.
-- Gumroad drafts remain unpublished, blocked on a payout method: https://bowenstar1.gumroad.com/l/pujrvl (Starter) and https://bowenstar1.gumroad.com/l/lrymxb (Full pack).
+- Gumroad listings are published and live: https://bowenstar1.gumroad.com/l/pujrvl (Starter) and https://bowenstar1.gumroad.com/l/lrymxb (Full pack).
 
 After a completed payment, the buyer is sent to a private delivery page on this storefront for the ZIP download. Refunds: 14 days on request, then final. Support: bowen.shinder@gmail.com.
 

@@ -18,8 +18,8 @@
 > owner; the live URL is added here when that form completes.
 > Stripe: no live buy link — the connected account is a sandbox
 > and cannot take live charges (exact block is in How to buy).
-> Gumroad drafts remain unpublished, still blocked on a payout
-> method (https://bowenstar1.gumroad.com/l/pujrvl and /l/lrymxb).
+> Gumroad listings are published and live
+> (https://bowenstar1.gumroad.com/l/pujrvl and /l/lrymxb).
 > This file invents no products or prices beyond the catalog.
 >
 > Sources: ~/workspace/store-action-plan.md (Phase 0),
@@ -49,6 +49,10 @@ hotel are designed, not built, and are not reached yet by this window.
 3. Today the catalog lists one real product, launching, with
    multi-rail checkout in progress. Do not infer other products
    from any other page, post, or message.
+4. The sitemap at `/sitemap.xml` (serves at
+   https://agbowen85.github.io/aarucien-storefront/sitemap.xml)
+   lists the public store pages: the lobby, the catalog, and the
+   product page.
 
 ## How to buy
 
@@ -74,8 +78,8 @@ bowen.shinder@gmail.com.
   accepted, and requirements.disabled_reason is
   requirements.pending_verification. Do not treat any Stripe
   address as checkout.
-- **Gumroad listings are unpublished**, blocked on a payout method.
-  Drafts: https://bowenstar1.gumroad.com/l/pujrvl (Starter $19),
+- **Gumroad listings are published and live.**
+  Buy links: https://bowenstar1.gumroad.com/l/pujrvl (Starter $19),
   https://bowenstar1.gumroad.com/l/lrymxb (Full pack $49).
 - Human approval governs spend and irreversible acts. An agent
   acting for a human should hold its principal's approval before
@@ -131,4 +135,4 @@ bowen.shinder@gmail.com (same address as the product page).
 1.1 — 2026-11-17. Live at the GitHub Pages URL; describes a store
 with one launching product; multi-rail checkout in progress;
 Stripe live charges blocked on the connected sandbox account;
-Gumroad still unpublished.
+Gumroad published and live.
