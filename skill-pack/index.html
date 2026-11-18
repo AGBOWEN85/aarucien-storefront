@@ -2,330 +2,672 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Consent-First Outbound &amp; Connector Operations — the 1-operator system for running many AI tools with recorded yeses. A one-time download. Gumroad checkout live.">
+<meta name="theme-color" content="#0A231C">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Consent-First Outbound &amp; Connector Operations — Aarucien">
+<meta property="og:description" content="The 1-operator system for running many AI tools with recorded yeses. Starter $19, Full pack $49, one time. Gumroad checkout live.">
+<link rel="icon" href="/aarucien-storefront/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/aarucien-storefront/favicon.ico" sizes="any">
 <title>Consent-First Outbound &amp; Connector Operations — Aarucien</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Consent-First Outbound & Connector Operations",
+  "description": "The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method: a doctrine plan, twelve skill notes in the /aarucien:* namespace, a working-pattern method, a brief template with three worked exemplars, and three scheduled-job templates.",
+  "brand": { "@type": "Brand", "name": "Aarucien" },
+  "url": "https://agbowen85.github.io/aarucien-storefront/skill-pack",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Starter",
+      "price": "19",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://bowenstar1.gumroad.com/l/pujrvl"
+    },
+    {
+      "@type": "Offer",
+      "name": "Full pack",
+      "price": "49",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://bowenstar1.gumroad.com/l/lrymxb"
+    }
+  ]
+}
+</script>
 <style>
+/* Aarucien storefront design system v3 — system fonts only, no external resources. */
 :root {
-  --paper: #F7F5F0;
+  --paper: #F5F4F0;
   --surface: #FFFFFF;
-  --ink: #1A1D21;
-  --muted: #5A6068;
+  --ink: #131816;
+  --ink-soft: #2A332E;
+  --muted: #5B6660;
+  --line: #E3DFD5;
+  --line-strong: #CFC9BB;
+  --pine-950: #061512;
+  --pine-900: #0A231C;
+  --pine-800: #0E3228;
+  --pine-700: #11503F;
   --accent: #0F5C4D;
-  --accent-deep: #0B3B33;
-  --accent-tint: #D9EDE7;
-  --danger: #9B1C1C;
-  --info: #1D4ED8;
-  --warn: #F2C94C;
-  --warn-ink: #3D2C00;
-  --border: #C9C4B8;
-  --focus: #1D4ED8;
-  /* Spacing scale (px): only these values. */
-  --space-0: 0;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 24px;
-  --space-6: 32px;
-  --space-7: 48px;
-  --space-8: 64px;
-  /* Radii: two only. */
-  --radius-control: 6px;
-  --radius-card: 10px;
-  /* Type: system stack only; no webfont. */
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --accent-deep: #0A4237;
+  --accent-bright: #2FD6A3;
+  --accent-soft: #7DE8C3;
+  --accent-tint: #DDF0E8;
+  --live: #067647;
+  --live-bg: #D1FADF;
+  --live-line: #A6F4C5;
+  --wait: #B54708;
+  --wait-bg: #FEF0C7;
+  --wait-line: #FEDF89;
+  --blocked: #B42318;
+  --blocked-bg: #FEE4E2;
+  --blocked-line: #FECDCA;
+  --info: #175CD3;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(16, 24, 20, .06), 0 1px 3px rgba(16, 24, 20, .08);
+  --shadow: 0 8px 24px rgba(16, 24, 20, .08), 0 2px 6px rgba(16, 24, 20, .06);
+  --shadow-lg: 0 24px 48px rgba(6, 21, 18, .20), 0 8px 16px rgba(6, 21, 18, .10);
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --wrap: 72rem;
+  --wrap-narrow: 46rem;
 }
-html {
-  color-scheme: light;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+html { color-scheme: light; scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-body);
+  font-family: var(--font);
   font-size: 16px;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-.shell {
-  width: min(100% - var(--space-6), 44rem);
-  margin-inline: auto;
-}
-.site-header {
-  padding-block-start: var(--space-5);
-}
-.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.nav-list a {
-  display: inline-block;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-control);
-}
-.nav-list a[aria-current="page"] {
+h1, h2, h3 { line-height: 1.2; letter-spacing: -.02em; text-wrap: balance; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin: 0 0 .5rem; }
+h3 { font-size: 1.25rem; margin: 0 0 .5rem; }
+p, ul, ol { margin: .75rem 0; }
+ul, ol { padding-inline-start: 1.5rem; }
+li { margin-block: .3rem; }
+li::marker { color: var(--accent); }
+a { color: var(--accent); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent-deep); }
+code {
+  font-family: var(--mono);
+  font-size: .86em;
   background: var(--accent-tint);
   color: var(--accent-deep);
-  font-weight: 600;
-}
-main.shell {
-  padding-block: var(--space-6) 0;
-}
-.banner {
-  background: var(--warn);
-  color: var(--warn-ink);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  padding: var(--space-4);
-  margin: 0 0 var(--space-6);
-}
-h1, h2, h3 {
-  line-height: 1.25;
-}
-h1 {
-  max-width: 16ch;
-  font-size: 32px;
-  margin: 0 0 var(--space-4);
-}
-h1.wide {
-  max-width: none;
-}
-h2 {
-  font-size: 24px;
-  margin: 0 0 var(--space-3);
-}
-h3 {
-  font-size: 20px;
-  margin: var(--space-5) 0 var(--space-2);
-}
-p, ul {
-  margin: var(--space-3) 0;
-}
-ul {
-  padding-inline-start: var(--space-5);
-}
-li {
-  margin-block: var(--space-1);
-}
-.lead {
-  font-size: 20px;
-  margin: 0;
-}
-main > section {
-  margin-top: var(--space-6);
-}
-section > .card {
-  margin-top: var(--space-5);
-}
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  padding: var(--space-5);
-}
-.card > :first-child {
-  margin-top: 0;
-}
-.card > :last-child {
-  margin-bottom: 0;
-}
-.card + p {
-  margin-top: var(--space-5);
-}
-.tier-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-5);
-}
-.tier-grid + p {
-  margin-top: var(--space-5);
-}
-@media (min-width: 48rem) {
-  .tier-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.badge {
-  display: inline-block;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-control);
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 600;
-  padding: var(--space-1) var(--space-2);
-  margin: var(--space-3) 0 0;
-}
-.badge + p {
-  margin-top: var(--space-2);
-}
-a {
-  color: var(--accent);
-  text-underline-offset: .18em;
-}
-p a, li a {
-  color: var(--info);
-}
-.nav-list a, .link-row a, footer a {
-  color: var(--accent);
-}
-a:hover {
-  color: var(--accent-deep);
-}
-.button {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--surface);
-  font-weight: 600;
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-control);
-}
-.button:hover {
-  background: var(--accent-deep);
-  color: var(--surface);
-}
-:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-}
-code {
-  font-size: .92em;
+  padding: .15em .45em;
+  border-radius: 6px;
   overflow-wrap: break-word;
 }
+:focus-visible { outline: 3px solid var(--info); outline-offset: 3px; border-radius: 4px; }
+.vh {
+  position: absolute !important; width: 1px; height: 1px;
+  margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 100;
+  background: var(--pine-900); color: #fff; font-weight: 700;
+  padding: .75rem 1.25rem; border-radius: var(--radius-sm); text-decoration: none;
+}
+.skip-link:focus { top: 1rem; color: #fff; }
+.wrap { width: min(100% - 2rem, var(--wrap)); margin-inline: auto; }
+.wrap-narrow { width: min(100% - 2rem, var(--wrap-narrow)); margin-inline: auto; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(245, 244, 240, .88);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.25rem;
+  padding-block: .65rem;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: .6rem;
+  color: var(--ink); text-decoration: none; font-weight: 800;
+  font-size: 1.15rem; letter-spacing: -.02em; margin-right: auto;
+}
+.brand:hover { color: var(--ink); }
+.brand-mark { flex: none; display: block; }
+.brand small {
+  display: block; font-size: .68rem; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); line-height: 1.2;
+}
+.nav-list {
+  display: flex; flex-wrap: wrap; gap: .25rem;
+  list-style: none; margin: 0; padding: 0;
+}
+.nav-list li { margin: 0; }
+.nav-list a {
+  display: inline-block; padding: .6rem .85rem; border-radius: var(--radius-pill);
+  color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: .95rem;
+  min-height: 44px; line-height: 1.5;
+}
+.nav-list a:hover { background: #EAE7DE; color: var(--ink); }
+.nav-list a[aria-current="page"] { background: var(--accent-tint); color: var(--accent-deep); }
+.header-cta {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: .6rem 1.1rem; border-radius: var(--radius-pill);
+  background: var(--accent); color: #fff !important; text-decoration: none;
+  font-weight: 700; font-size: .95rem;
+}
+.header-cta:hover { background: var(--accent-deep); color: #fff !important; }
+@media (max-width: 40rem) {
+  .header-inner { gap: .3rem .75rem; padding-block: .55rem; }
+  .header-inner > nav { order: 3; flex-basis: 100%; }
+  .header-cta { order: 2; }
+  .nav-list { flex-wrap: nowrap; overflow-x: auto; width: 100%; scrollbar-width: none; }
+  .nav-list::-webkit-scrollbar { display: none; }
+  .nav-list a { white-space: nowrap; padding: .55rem .75rem; }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 52px; padding: .85rem 1.5rem; border-radius: 12px;
+  font-weight: 700; font-size: 1rem; line-height: 1.3; text-decoration: none;
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow-sm); }
+.btn-primary:hover { background: var(--accent-deep); color: #fff; }
+.btn-light { background: #fff; color: var(--pine-900); }
+.btn-light:hover { background: #EAF6F0; color: var(--pine-900); }
+.btn-ghost-dark { border: 1.5px solid rgba(255, 255, 255, .45); color: #fff; }
+.btn-ghost-dark:hover { border-color: #fff; background: rgba(255, 255, 255, .08); color: #fff; }
+.btn-ghost-light { border: 1.5px solid var(--line-strong); color: var(--ink); background: transparent; }
+.btn-ghost-light:hover { border-color: var(--accent); color: var(--accent-deep); background: #fff; }
+.btn-block { width: 100%; }
+.cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+@media (max-width: 30rem) {
+  .cta-row .btn { flex: 1 1 100%; }
+}
+
+/* ---------- Pills & status ---------- */
+.pill {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .35rem .8rem; border-radius: var(--radius-pill);
+  border: 1px solid transparent; font-size: .83rem; font-weight: 700; line-height: 1.4;
+  white-space: nowrap;
+}
+.pill .dot { width: 8px; height: 8px; flex: none; border-radius: 50%; background: currentColor; }
+.pill-live { background: var(--live-bg); color: var(--live); border-color: var(--live-line); }
+.pill-live .dot { animation: pulse 2.4s ease-in-out infinite; }
+.pill-wait { background: var(--wait-bg); color: var(--wait); border-color: var(--wait-line); }
+.pill-blocked { background: var(--blocked-bg); color: var(--blocked); border-color: var(--blocked-line); }
+.pill-neutral { background: #EEEBE2; color: var(--ink-soft); border-color: var(--line-strong); }
+.pill-bright { background: rgba(47, 214, 163, .16); color: var(--accent-soft); border-color: rgba(47, 214, 163, .4); }
+.pill-bright .dot { animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(47, 214, 163, .0); opacity: 1; }
+  50% { box-shadow: 0 0 0 4px rgba(47, 214, 163, .18); opacity: .85; }
+}
+.status-strip {
+  display: grid; grid-template-columns: 1fr; gap: .75rem;
+  list-style: none; margin: 2rem 0 0; padding: 0;
+}
+@media (min-width: 56rem) { .status-strip { grid-template-columns: repeat(3, 1fr); } }
+.status-card {
+  border-radius: var(--radius); padding: 1.1rem 1.2rem;
+  background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .14);
+}
+.status-card h3 { color: #fff; font-size: 1rem; margin-bottom: .45rem; }
+.status-card p { margin: .45rem 0 0; color: rgba(237, 242, 238, .82); font-size: .93rem; }
+.status-card a { color: var(--accent-soft); }
+.status-strip-light .status-card {
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+}
+.status-strip-light .status-card h3 { color: var(--ink); }
+.status-strip-light .status-card p { color: var(--muted); }
+.status-strip-light .status-card a { color: var(--accent); }
+
+/* ---------- Hero (dark) ---------- */
+.hero {
+  background:
+    radial-gradient(1100px 520px at 88% -10%, rgba(47, 214, 163, .22), transparent 60%),
+    radial-gradient(800px 460px at -12% 112%, rgba(47, 214, 163, .13), transparent 55%),
+    linear-gradient(180deg, var(--pine-900), var(--pine-950));
+  color: #EDF2EE;
+  border-bottom: 1px solid #123B2F;
+  padding: clamp(2.75rem, 8vw, 5rem) 0 clamp(2.5rem, 6vw, 3.75rem);
+}
+.hero .eyebrow { color: var(--accent-soft); }
+.hero h1 {
+  font-size: clamp(2.35rem, 6.5vw + 1rem, 3.9rem);
+  line-height: 1.06; letter-spacing: -.03em;
+  max-width: 24ch; margin: 1rem 0 1.25rem; color: #fff;
+}
+.hero-lead {
+  font-size: clamp(1.1rem, 2.6vw, 1.3rem); line-height: 1.55;
+  color: rgba(237, 242, 238, .88); max-width: 56ch; margin: 0;
+}
+.hero .btn-ghost-dark { color: #fff; }
+.hero-price {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; align-items: baseline;
+  margin-top: 1.5rem; font-size: 1.05rem; font-weight: 600; color: #fff;
+}
+.hero-price span { color: rgba(237, 242, 238, .75); font-weight: 500; font-size: .95rem; }
+.hero-note { margin-top: .5rem; color: rgba(237, 242, 238, .75); font-size: .95rem; }
+.status-line { font-size: .92rem; color: rgba(237, 242, 238, .8); margin-top: 1.25rem; }
+.status-line strong { color: #fff; }
+
+/* ---------- Page head (light) ---------- */
+.page-head { padding: clamp(2.25rem, 6vw, 3.5rem) 0 0; }
+.page-head h1 {
+  font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.08;
+  letter-spacing: -.03em; margin: 1rem 0 .9rem;
+}
+.page-head .lead, .lead {
+  font-size: clamp(1.08rem, 2.4vw, 1.25rem); line-height: 1.55;
+  color: var(--ink-soft); max-width: 56ch; margin: 0;
+}
+.eyebrow {
+  font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin: 0;
+}
+main section { scroll-margin-top: 124px; }
+@media (min-width: 56rem) { main section { scroll-margin-top: 84px; } }
+.section { padding-block: clamp(2.25rem, 6vw, 3.75rem); }
+.section + .section { border-top: 1px solid var(--line); }
+.section-tight { padding-block: clamp(1.75rem, 5vw, 2.75rem); }
+.section-intro { max-width: var(--wrap-narrow); }
+.section-intro p { color: var(--ink-soft); }
+
+/* ---------- Cards & grids ---------- */
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); padding: clamp(1.25rem, 4vw, 1.75rem);
+  box-shadow: var(--shadow-sm);
+}
+.card > :first-child { margin-top: 0; }
+.card > :last-child { margin-bottom: 0; }
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+@media (min-width: 56rem) {
+  .card-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+.card-grid .card h3 { font-size: 1.15rem; }
+.card-grid .card p, .card-grid .card li { color: var(--ink-soft); font-size: .98rem; }
+a.card-link { color: inherit; text-decoration: none; display: block; transition: transform .15s ease, box-shadow .15s ease; }
+a.card-link:hover { transform: translateY(-2px); box-shadow: var(--shadow); color: inherit; }
+a.card-link h3 { color: var(--accent); }
+.price-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.price-chips li { margin: 0; }
+.chip {
+  display: inline-block; padding: .35rem .8rem; border-radius: var(--radius-pill);
+  background: var(--accent-tint); color: var(--accent-deep);
+  font-size: .85rem; font-weight: 700; white-space: nowrap;
+}
+.link-row { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; }
+.link-row a { font-weight: 600; }
+
+/* ---------- Status rows (full wording) ---------- */
+.status-rows { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: .85rem; }
+.status-rows li {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.1rem 1.25rem; margin: 0; box-shadow: var(--shadow-sm);
+}
+.status-rows li p { margin: .5rem 0 0; color: var(--ink-soft); }
+.status-rows li p:first-of-type { margin-top: .55rem; }
+
+/* ---------- Steps ---------- */
+.steps {
+  list-style: none; counter-reset: step; margin: 1.5rem 0 0; padding: 0;
+  display: grid; grid-template-columns: 1fr; gap: 1rem;
+}
+@media (min-width: 56rem) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.steps li {
+  counter-increment: step; position: relative;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.25rem 1.25rem 1.25rem 4.25rem; margin: 0; box-shadow: var(--shadow-sm);
+  color: var(--ink-soft);
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 1.1rem; top: 1.15rem;
+  width: 2.1rem; height: 2.1rem; border-radius: 50%;
+  background: var(--pine-900); color: #fff; font-weight: 800; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.steps li strong { display: block; color: var(--ink); font-size: 1.05rem; margin-bottom: .2rem; }
+
+/* ---------- Tiers ---------- */
+.tier-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+@media (min-width: 56rem) { .tier-grid { grid-template-columns: repeat(2, 1fr); align-items: stretch; } }
+.tier-card {
+  display: flex; flex-direction: column;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: var(--shadow-sm);
+}
+.tier-card h3 { font-size: 1.35rem; }
+.tier-card .tier-sub { color: var(--muted); font-size: .95rem; margin-top: -.25rem; }
+.tier-price { display: flex; align-items: baseline; gap: .5rem; margin: .9rem 0 .25rem; }
+.tier-price .amount { font-size: clamp(2.4rem, 7vw, 3rem); font-weight: 800; letter-spacing: -.03em; line-height: 1; }
+.tier-price .per { color: var(--muted); font-weight: 600; }
+.tier-card .tier-desc { color: var(--ink-soft); }
+.tier-card .btn { margin-top: 1.1rem; }
+.tier-card.featured {
+  background:
+    radial-gradient(500px 260px at 100% 0%, rgba(47, 214, 163, .18), transparent 60%),
+    linear-gradient(180deg, var(--pine-900), var(--pine-950));
+  border-color: var(--pine-800); color: #EDF2EE; box-shadow: var(--shadow-lg);
+}
+.tier-card.featured h3 { color: #fff; }
+.tier-card.featured .tier-sub { color: rgba(237, 242, 238, .75); }
+.tier-card.featured .tier-price .per { color: rgba(237, 242, 238, .75); }
+.tier-card.featured .tier-desc { color: rgba(237, 242, 238, .86); }
+.tier-card.featured code { background: rgba(47, 214, 163, .16); color: var(--accent-soft); }
+.tier-card.featured a:not(.btn) { color: var(--accent-soft); }
+.tier-flag {
+  align-self: flex-start; margin-bottom: .9rem;
+  background: var(--accent-bright); color: var(--pine-950);
+  font-size: .8rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  padding: .4rem .8rem; border-radius: var(--radius-pill);
+}
+.rail-list { list-style: none; margin: 1.4rem 0 0; padding: 1.1rem 0 0; border-top: 1px solid var(--line); display: grid; gap: 1rem; }
+.tier-card.featured .rail-list { border-top-color: rgba(255, 255, 255, .16); }
+.rail-list li { margin: 0; }
+.rail-list p { margin: .5rem 0 0; font-size: .93rem; color: var(--ink-soft); }
+.tier-card.featured .rail-list p { color: rgba(237, 242, 238, .82); }
+.tier-note { margin-top: 1.25rem; color: var(--muted); }
+
+/* ---------- Skill groups ---------- */
+.group-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+@media (min-width: 64rem) { .group-grid { grid-template-columns: repeat(3, 1fr); } }
+.group-card ul { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .9rem; }
+.group-card li { margin: 0; color: var(--ink-soft); font-size: .96rem; }
+.group-card li code { display: inline-block; margin-bottom: .15rem; }
+
+/* ---------- Compare table ---------- */
+.table-scroll { overflow-x: auto; margin-top: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-sm); }
+table.compare { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .98rem; }
+.compare caption { text-align: left; padding: 1rem 1.25rem .25rem; font-weight: 700; font-size: 1.1rem; }
+.compare th, .compare td { padding: .8rem 1.25rem; text-align: left; border-top: 1px solid var(--line); vertical-align: top; }
+.compare thead th { border-top: 0; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.compare thead th:not(:first-child), .compare tbody td:not(:first-child) { text-align: center; }
+.compare tbody td:not(:first-child), .compare tfoot td:not(:first-child) { white-space: nowrap; }
+.compare tbody th { font-weight: 600; color: var(--ink-soft); }
+.compare .yes { color: var(--live); font-weight: 800; }
+.compare .no { color: var(--muted); }
+.compare tfoot td { font-weight: 700; background: #FAF9F6; }
+@media (max-width: 40rem) {
+  .compare th, .compare td { padding: .7rem .6rem; font-size: .92rem; }
+  .compare thead th { font-size: .72rem; letter-spacing: .05em; }
+  .compare caption { padding: 1rem 1rem .25rem; }
+}
+
+/* ---------- Fine print / callout ---------- */
+.fineprint { margin-top: 1.5rem; }
+.fineprint p { color: var(--ink-soft); }
+.fineprint strong { color: var(--ink); }
+.callout {
+  text-align: center; max-width: var(--wrap-narrow); margin-inline: auto;
+  border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  padding: clamp(1.75rem, 5vw, 2.5rem) 0;
+}
+.callout p { font-size: clamp(1.2rem, 3vw, 1.45rem); line-height: 1.5; color: var(--pine-900); font-weight: 600; margin: 0; }
+
+/* ---------- Footer ---------- */
 .site-footer {
-  margin-top: var(--space-7);
-  border-top: 1px solid var(--border);
-  padding-block: var(--space-4) var(--space-8);
-  font-size: 14px;
+  background: var(--pine-950); color: rgba(237, 242, 238, .78);
+  margin-top: clamp(2.5rem, 7vw, 4rem); padding: clamp(2.25rem, 6vw, 3.5rem) 0 3rem;
+  font-size: .95rem;
 }
-.site-footer p {
-  margin: var(--space-2) 0;
+.site-footer a { color: var(--accent-soft); }
+.site-footer a:hover { color: #fff; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
+@media (min-width: 56rem) { .footer-grid { grid-template-columns: 1.6fr 1fr 1fr; } }
+.footer-brand { color: #fff; font-weight: 800; font-size: 1.2rem; letter-spacing: -.02em; margin: 0 0 .5rem; }
+.site-footer p { margin: .4rem 0; }
+.footer-nav h3 { color: #fff; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+.footer-nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.footer-nav li { margin: 0; }
+.footer-base { border-top: 1px solid rgba(255, 255, 255, .14); margin-top: 2rem; padding-top: 1.25rem; color: rgba(237, 242, 238, .6); font-size: .88rem; }
+
+/* ---------- Sticky buy bar (product page) ---------- */
+body.has-buybar { padding-bottom: 5.5rem; }
+.buybar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  background: rgba(6, 21, 18, .94);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, .16);
+  padding: .7rem 0 calc(.7rem + env(safe-area-inset-bottom, 0px));
+  color: #EDF2EE;
 }
-.site-footer p:first-child {
-  margin-top: 0;
+.buybar-inner { display: flex; align-items: center; gap: 1rem; }
+.buybar-text { margin: 0; line-height: 1.35; min-width: 0; }
+.buybar-text strong { display: block; color: #fff; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.buybar-text span { font-size: .85rem; color: rgba(237, 242, 238, .75); }
+.buybar .btn { margin-left: auto; min-height: 48px; flex: none; padding: .7rem 1.25rem; }
+@media (max-width: 30rem) {
+  .buybar-text span { display: none; }
+  .buybar-text strong { font-size: .88rem; }
 }
+
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   *, *::before, *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
+    animation: none !important; transition: none !important;
   }
 }
 </style>
 </head>
-<body>
-<header class="shell site-header">
-<nav>
+<body class="has-buybar">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/aarucien-storefront/">
+<svg class="brand-mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#0A231C"/><path d="M16 6.5 24 25.5h-3.4L16 14.6l-4.6 10.9H8L16 6.5Z" fill="#2FD6A3"/></svg>
+<span>Aarucien<small>Agent storefront</small></span>
+</a>
+<nav aria-label="Storefront">
 <ul class="nav-list">
 <li><a href="/aarucien-storefront/">Storefront lobby</a></li>
 <li><a href="/aarucien-storefront/catalog">Catalog</a></li>
 <li><a href="/aarucien-storefront/skill-pack" aria-current="page">Product page</a></li>
 </ul>
 </nav>
+<a class="header-cta" href="#tiers">Buy — from $19</a>
+</div>
 </header>
-<main class="shell">
-<div class="banner" role="status"><strong>Status:</strong> One-time purchase · Buying open on Gumroad · 17 November 2026</div>
-<header class="intro">
-<h1 class="wide">Consent-First Outbound &amp; Connector Operations</h1>
-<p class="lead">The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method, written from a real operating setup — not generic prompts, not software.</p>
-</header>
-<section>
-<h2>What it is</h2>
+
+<main id="main">
+<section class="hero" aria-labelledby="page-title">
+<div class="wrap">
+<p class="eyebrow"><span class="pill pill-bright"><span class="dot" aria-hidden="true"></span>Buying open on Gumroad</span></p>
+<h1 id="page-title">Consent-First Outbound &amp; Connector Operations</h1>
+<p class="hero-lead">The 1-operator system for running many AI tools with recorded yeses. A one-time download of documentation and method, written from a real operating setup — not generic prompts, not software.</p>
+<p class="hero-price">Starter $19 &nbsp;·&nbsp; Full pack $49</p>
+<p class="hero-note">One time, in US dollars · There is no subscription.</p>
+<div class="cta-row">
+<a class="btn btn-light" href="#tiers">Choose your tier</a>
+<a class="btn btn-ghost-dark" href="#inside">What&rsquo;s inside — 21 assets</a>
+</div>
+<p class="status-line" role="status"><strong>Status:</strong> One-time purchase · Buying open on Gumroad · 17 November 2026</p>
+</div>
+</section>
+
+<div class="wrap">
+<section class="section section-intro" aria-labelledby="what">
+<p class="eyebrow">The product</p>
+<h2 id="what">What it is</h2>
 <p>A solo operator running several AI hands against connected tools needs two things: a way to run outbound work that respects the people on the receiving end, and a way to keep many agents, many connectors, and many scheduled jobs from drifting into a mess. This pack is both, as practiced.</p>
 <p>Everything in the pack is Markdown text in a ZIP download. There is no code to install, nothing to execute, and no account access included. The pack tells you what to do and how to check it; your own tools do the doing.</p>
 <p>Research is current as of November 16, 2026. Vendor pages, plan terms, and capabilities change — re-check them before relying on any vendor claim.</p>
 </section>
-<section>
-<h2>The two rules</h2>
-<ul>
-<li><strong>Joy first.</strong> No skill ships unless it can name the joy point it plants and the person who receives it. If a skill's only advantage is finding a wound faster, it is redesigned or it does not ship.</li>
-<li><strong>Consent first.</strong> Engagement is not permission. A reply, a click, or a public profile is not a yes. Automated hands draft; a human says yes before anything sends, spends, publishes, or deletes. Every automated action leaves a receipt, and every receipt can be audited.</li>
-</ul>
+
+<section class="section" aria-labelledby="rules">
+<p class="eyebrow">The doctrine</p>
+<h2 id="rules">The two rules</h2>
+<div class="card-grid card-grid-2">
+<article class="card">
+<h3>Joy first</h3>
+<p><strong>Joy first.</strong> No skill ships unless it can name the joy point it plants and the person who receives it. If a skill's only advantage is finding a wound faster, it is redesigned or it does not ship.</p>
+</article>
+<article class="card">
+<h3>Consent first</h3>
+<p><strong>Consent first.</strong> Engagement is not permission. A reply, a click, or a public profile is not a yes. Automated hands draft; a human says yes before anything sends, spends, publishes, or deletes. Every automated action leaves a receipt, and every receipt can be audited.</p>
+</article>
+</div>
 </section>
-<section>
-<h2>What's inside — the full pack (21 assets)</h2>
+
+<section class="section" id="inside" aria-labelledby="inside-heading">
+<p class="eyebrow">Contents</p>
+<h2 id="inside-heading">What's inside — the full pack (21 assets)</h2>
 <p><strong>The doctrine plan.</strong> The operating theory: the joy-first doctrine, the 12-skill stack-mapping method, and the least-privilege auth-shape rules. Read this first.</p>
 <p><strong>Twelve skill notes</strong>, each with its own command in the <code>/aarucien:*</code> namespace:</p>
-<section class="card">
+<div class="group-grid">
+<section class="card group-card">
 <h3>Outbound — consent-first redesigns</h3>
 <ul>
-<li><code>/aarucien:outbound-agent</code> — Cold email, draft-first: nothing sends without a human yes.</li>
-<li><code>/aarucien:enrich-linkedin-engagers</code> — Engager enrichment where the redesign, not the harvest, is the product.</li>
-<li><code>/aarucien:post-engagers</code> — Post-engager outreach as a one-shot plus standing-tool pair.</li>
-<li><code>/aarucien:enrichment-tables</code> — Enrichment tables built secret-proof, consent-first.</li>
+<li><code>/aarucien:outbound-agent</code><br>Cold email, draft-first: nothing sends without a human yes.</li>
+<li><code>/aarucien:enrich-linkedin-engagers</code><br>Engager enrichment where the redesign, not the harvest, is the product.</li>
+<li><code>/aarucien:post-engagers</code><br>Post-engager outreach as a one-shot plus standing-tool pair.</li>
+<li><code>/aarucien:enrichment-tables</code><br>Enrichment tables built secret-proof, consent-first.</li>
 </ul>
 </section>
-<section class="card">
+<section class="card group-card">
 <h3>Creative — joy-first skills</h3>
 <ul>
-<li><code>/aarucien:static-ads</code> — Static ad variants with claim verification and paused rules.</li>
-<li><code>/aarucien:ugc-video</code> — One talking-head video ad from joy-mined scripts.</li>
-<li><code>/aarucien:ugc-studio</code> — The same job as a standing team studio: a batch grid, every render verified.</li>
-<li><code>/aarucien:post-to-video</code> — A post turned into a short video with a beat of delight and respect for the viewer.</li>
+<li><code>/aarucien:static-ads</code><br>Static ad variants with claim verification and paused rules.</li>
+<li><code>/aarucien:ugc-video</code><br>One talking-head video ad from joy-mined scripts.</li>
+<li><code>/aarucien:ugc-studio</code><br>The same job as a standing team studio: a batch grid, every render verified.</li>
+<li><code>/aarucien:post-to-video</code><br>A post turned into a short video with a beat of delight and respect for the viewer.</li>
 </ul>
 </section>
-<section class="card">
+<section class="card group-card">
 <h3>Intelligence</h3>
 <ul>
-<li><code>/aarucien:ad-spy</code> — Ad intelligence with a joy-gap heat map.</li>
-<li><code>/aarucien:analytics-dashboard</code> — Reporting with a receipt rule (in-bundle method, not a standalone product).</li>
-<li><code>/aarucien:seo-agent</code> — Search work with page-two mining and human-read gating.</li>
-<li><code>/aarucien:google-ads-agent</code> — Ads method with a spend-truth rule and human-yes gating; states plainly on its face that no working integration is claimed.</li>
+<li><code>/aarucien:ad-spy</code><br>Ad intelligence with a joy-gap heat map.</li>
+<li><code>/aarucien:analytics-dashboard</code><br>Reporting with a receipt rule (in-bundle method, not a standalone product).</li>
+<li><code>/aarucien:seo-agent</code><br>Search work with page-two mining and human-read gating.</li>
+<li><code>/aarucien:google-ads-agent</code><br>Ads method with a spend-truth rule and human-yes gating; states plainly on its face that no working integration is claimed.</li>
 </ul>
 </section>
-<p><strong>The working-pattern method.</strong> The operating discipline for a 1-operator, multi-agent setup: the automatic-hands taxonomy, ten consent boundaries, quiet-unless-changed discipline, ledger receipts, and failure behaviors.</p>
+</div>
+<p style="margin-top:1.5rem"><strong>The working-pattern method.</strong> The operating discipline for a 1-operator, multi-agent setup: the automatic-hands taxonomy, ten consent boundaries, quiet-unless-changed discipline, ledger receipts, and failure behaviors.</p>
 <p><strong>The brief template and three worked exemplars.</strong> The 5-section format for writing a connector operating brief, plus three finished ones to learn from: a read-only memory feed, a pricing-research search, and a commerce protocol.</p>
 <p><strong>Three scheduled-job templates.</strong> Copy-ready job bodies for a morning money check, a shared-workspace sweep, and a price-watch radar.</p>
 </section>
-<section>
-<h2>Tiers</h2>
+
+<section class="section" id="tiers" aria-labelledby="tiers-heading">
+<p class="eyebrow">Buy — one time, USD</p>
+<h2 id="tiers-heading">Tiers</h2>
 <div class="tier-grid">
-<section class="card">
-<h3>Starter — $19, one time</h3>
-<p>Six assets: the doctrine plan, the four consent-first outbound skills (<code>/aarucien:outbound-agent</code>, <code>/aarucien:enrich-linkedin-engagers</code>, <code>/aarucien:post-engagers</code>, <code>/aarucien:enrichment-tables</code>), and the brief template. The outbound system, complete: doctrine, skills, and the format for writing more.</p>
-<p><a class="button" href="https://bowenstar1.gumroad.com/l/pujrvl">Buy Starter on Gumroad — $19</a></p>
-<p class="badge">Awaiting owner confirmation</p>
+<section class="tier-card">
+<h3>Starter</h3>
+<p class="tier-sub">The outbound system, complete</p>
+<div class="tier-price"><span class="amount">$19</span><span class="per">one time</span></div>
+<p class="tier-desc">Six assets: the doctrine plan, the four consent-first outbound skills (<code>/aarucien:outbound-agent</code>, <code>/aarucien:enrich-linkedin-engagers</code>, <code>/aarucien:post-engagers</code>, <code>/aarucien:enrichment-tables</code>), and the brief template. The outbound system, complete: doctrine, skills, and the format for writing more.</p>
+<a class="btn btn-primary btn-block" href="https://bowenstar1.gumroad.com/l/pujrvl">Buy Starter on Gumroad — $19</a>
+<ul class="rail-list">
+<li>
+<span class="pill pill-wait"><span class="dot" aria-hidden="true"></span>Awaiting owner confirmation</span>
 <p><strong>PayPal.</strong> A payment-link form for this tier is open for the seller to confirm. The live PayPal buy link will appear here the moment that form completes. There is no working PayPal URL on this page until then.</p>
-<p class="badge">Blocked</p>
+</li>
+<li>
+<span class="pill pill-blocked"><span class="dot" aria-hidden="true"></span>Blocked</span>
 <p><strong>Stripe.</strong> No live Stripe buy link. The connected Stripe account is a sandbox and cannot take live charges. See Purchase &amp; terms.</p>
-<p class="badge">Live</p>
+</li>
+<li>
+<span class="pill pill-live"><span class="dot" aria-hidden="true"></span>Live</span>
 <p><strong>Gumroad.</strong> The listing is published and live. Use the buy link above to buy this tier on Gumroad.</p>
+</li>
+</ul>
 </section>
-<section class="card">
-<h3>Full pack — $49, one time</h3>
-<p>All 21 assets listed above: the doctrine plan, all twelve skill notes, the working-pattern method, the brief template, the three worked exemplars, and the three scheduled-job templates.</p>
-<p><a class="button" href="https://bowenstar1.gumroad.com/l/lrymxb">Buy Full pack on Gumroad — $49</a></p>
-<p class="badge">Awaiting owner confirmation</p>
+<section class="tier-card featured">
+<span class="tier-flag">Everything · 21 assets</span>
+<h3>Full pack</h3>
+<p class="tier-sub">The complete 1-operator system</p>
+<div class="tier-price"><span class="amount">$49</span><span class="per">one time</span></div>
+<p class="tier-desc">All 21 assets listed above: the doctrine plan, all twelve skill notes, the working-pattern method, the brief template, the three worked exemplars, and the three scheduled-job templates.</p>
+<a class="btn btn-light btn-block" href="https://bowenstar1.gumroad.com/l/lrymxb">Buy Full pack on Gumroad — $49</a>
+<ul class="rail-list">
+<li>
+<span class="pill pill-wait"><span class="dot" aria-hidden="true"></span>Awaiting owner confirmation</span>
 <p><strong>PayPal.</strong> The Full pack payment-link form follows as soon as the Starter link is confirmed (the PayPal tool opens one form at a time). The live buy link will appear here when that form completes.</p>
-<p class="badge">Blocked</p>
+</li>
+<li>
+<span class="pill pill-blocked"><span class="dot" aria-hidden="true"></span>Blocked</span>
 <p><strong>Stripe.</strong> No live Stripe buy link. Same sandbox block as above.</p>
-<p class="badge">Live</p>
+</li>
+<li>
+<span class="pill pill-live"><span class="dot" aria-hidden="true"></span>Live</span>
 <p><strong>Gumroad.</strong> The listing is published and live. Use the buy link above to buy this tier on Gumroad.</p>
+</li>
+</ul>
 </section>
 </div>
-<p>Prices are one-time, in US dollars. There is no subscription.</p>
+<p class="tier-note">Prices are one-time, in US dollars. There is no subscription.</p>
 </section>
-<section class="card">
-<h2>How the skills were researched</h2>
+
+<section class="section" aria-labelledby="research">
+<div class="card fineprint">
+<h2 id="research">How the skills were researched</h2>
 <p>The twelve skill notes study the public agent skills of one vendor — Graphed (graphed.com) — from its public index, public pages, and one independent walkthrough, read November 16, 2026. No vendor prompt text is copied; capabilities are described in the author's own words, and inferences are labeled as unverified. Every skill note is split into two labeled parts: Part A describes what Graphed's skill does, from public sources; Part B is the author's own redesign. Nothing in this pack implies endorsement by Graphed, and nothing presents Graphed's skills as the author's work. The pack's own commands use the <code>/aarucien:*</code> namespace — the seller's own name — never the researched vendor's.</p>
-</section>
-<section class="card">
+</div>
+<div class="card fineprint">
 <h2>Purchase &amp; terms</h2>
 <p>Payment is one-time, in US dollars. After a completed payment, the buyer is sent to a private delivery page on this storefront for the ZIP download of the tier they bought. Refunds: 14 days on request, then final. Support: bowen.shinder@gmail.com. Illinois law governs.</p>
 <p><strong>Stripe, stated exactly.</strong> The only Stripe account in the seller's connected session is a sandbox account named “Aarucien.com sandbox.” A livemode request was rejected: “The provided account is a sandbox account. Retry with livemode set to false.” On that account, even in test mode, <code>charges_enabled</code> is false, <code>payouts_enabled</code> is false, <code>details_submitted</code> is false, Terms of Service have not been accepted, and <code>requirements.disabled_reason</code> is <code>requirements.pending_verification</code>. No Stripe Payment Link has been published, and no Stripe address on this site is checkout.</p>
 <p><strong>Gumroad.</strong> The listings are published and live.</p>
+</div>
+<p class="link-row" style="margin-top:1.5rem"><a href="/aarucien-storefront/catalog">Back to the catalog</a><a href="/aarucien-storefront/">Return to the storefront lobby</a></p>
 </section>
-<p class="link-row"><a href="/aarucien-storefront/catalog">Back to the catalog</a> · <a href="/aarucien-storefront/">Return to the storefront lobby</a></p>
+</div>
 </main>
-<footer class="shell site-footer">
+
+<div class="buybar" role="region" aria-label="Buy">
+<div class="wrap buybar-inner">
+<p class="buybar-text"><strong>Consent-First Outbound &amp; Connector Operations</strong><span>From $19 · One time · Gumroad live</span></p>
+<a class="btn btn-light" href="#tiers">Choose a tier</a>
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<p class="footer-brand">Aarucien</p>
 <p>Seller: Aarucien.</p>
+<p>Support: bowen.shinder@gmail.com · Refunds: 14 days on request, then final.</p>
+</div>
+<nav class="footer-nav" aria-label="Storefront footer">
+<h3>Storefront</h3>
+<ul>
+<li><a href="/aarucien-storefront/">Storefront lobby</a></li>
+<li><a href="/aarucien-storefront/catalog">Catalog</a></li>
+<li><a href="/aarucien-storefront/skill-pack">Product page</a></li>
+</ul>
+</nav>
+<nav class="footer-nav" aria-label="Machine-readable footer">
+<h3>Machine-readable</h3>
+<ul>
+<li><a href="/aarucien-storefront/catalog.json">Catalog JSON</a></li>
+<li><a href="#tiers">Buy links &amp; rail status</a></li>
+</ul>
+</nav>
+</div>
+<div class="footer-base">
+<p>One-time purchase · Buying open on Gumroad · 17 November 2026</p>
+</div>
+</div>
 </footer>
 </body>
 </html>
